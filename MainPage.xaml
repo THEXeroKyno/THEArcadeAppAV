@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="THEArcadeAppAV.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label
+                Text="Arcade App"
+                FontSize="50"
+                HorizontalOptions="Center"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <VerticalStackLayout Grid.Column="0" Grid.Row="0" WidthRequest="600" Spacing="5">
+                    <ImageButton
+                    Source="quizapp.png"
+                    WidthRequest="600"
+                    HeightRequest="400"
+                    Padding="20"
+                    Margin="10"
+                    BackgroundColor="DarkCyan"
+                    x:Name="ImageButton1"
+                    Clicked="ImageButton1_Clicked"
+                    />
+                    <Label
+                    Text="Quiz App"
+                    FontSize="30"
+                    HorizontalOptions="Start"/>
+                    <Label
+                    Text="Do you know your Stardew Valley Facts?? Prove yourself with this quiz!"
+                    FontSize="20"
+                    HorizontalOptions="Start"/>
+                    <Label
+                    Text="Rating: 10/10"
+                    FontSize="25"
+                    HorizontalOptions="Start"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout Grid.Column="1" Grid.Row="0" WidthRequest="600" Spacing="5">
+                    <ImageButton
+                    Source="dotnet_bot.png"
+                    WidthRequest="600"
+                    HeightRequest="400"
+                    Padding="20"
+                    Margin="10"
+                    x:Name="ImageButton2"
+                    Clicked="ImageButton2_Clicked"
+                    />
+                    <Label
+                    Text="Story App"
+                    FontSize="30"
+                    HorizontalOptions="Start"/>
+                    <Label
+                    Text="Do you know your Stardew Valley Facts?? Prove yourself with this quiz!"
+                    FontSize="20"
+                    HorizontalOptions="Start"/>
+                    <Label
+                    Text="Rating: 10/10"
+                    FontSize="25"
+                    HorizontalOptions="Start"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout Grid.Column="0" Grid.Row="1" WidthRequest="600" Spacing="5">
+                    <ImageButton
+                    Source="dotnet_bot.png"
+                    WidthRequest="600"
+                    HeightRequest="400"
+                    Padding="20"
+                    Margin="10"
+                    x:Name="ImageButton3"
+                    Clicked="ImageButton3_Clicked"/>
+                    <Label
+                    Text="Quiz App"
+                    FontSize="30"
+                    HorizontalOptions="Start"/>
+                    <Label
+                    Text="Do you know your Stardew Valley Facts?? Prove yourself with this quiz!"
+                    FontSize="20"
+                    HorizontalOptions="Start"/>
+                    <Label
+                    Text="Rating: 10/10"
+                    FontSize="25"
+                    HorizontalOptions="Start"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout Grid.Column="1" Grid.Row="1" WidthRequest="600" Spacing="5">
+                    <ImageButton
+                    Source="dotnet_bot.png"
+                    WidthRequest="600"
+                    HeightRequest="400"
+                    Padding="20"
+                    Margin="10"
+                    x:Name="ImageButton4"
+                    Clicked="ImageButton4_Clicked"
+                    />
+                    <Label
+                    Text="Quiz App"
+                    FontSize="30"
+                    HorizontalOptions="Start"/>
+                    <Label
+                    Text="Do you know your Stardew Valley Facts?? Prove yourself with this quiz!"
+                    FontSize="20"
+                    HorizontalOptions="Start"/>
+                    <Label
+                    Text="Rating: 10/10"
+                    FontSize="25"
+                    HorizontalOptions="Start"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout Grid.Column="0" Grid.Row="2" WidthRequest="600" Spacing="5">
+                    <ImageButton
+                    Source="dotnet_bot.png"
+                    WidthRequest="600"
+                    HeightRequest="400"
+                    Padding="20"
+                    Margin="10"
+                    x:Name="ImageButton5"
+                    Clicked="ImageButton5_Clicked"/>
+                    <Label
+                    Text="Quiz App"
+                    FontSize="30"
+                    HorizontalOptions="Start"/>
+                    <Label
+                    Text="Do you know your Stardew Valley Facts?? Prove yourself with this quiz!"
+                    FontSize="20"
+                    HorizontalOptions="Start"/>
+                    <Label
+                    Text="Rating: 10/10"
+                    FontSize="25"
+                    HorizontalOptions="Start"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout Grid.Column="1" Grid.Row="2" WidthRequest="600" Spacing="5">
+                    <ImageButton
+                    Source="dotnet_bot.png"
+                    WidthRequest="600"
+                    HeightRequest="400"
+                    Padding="20"
+                    Margin="10"
+                    x:Name="ImageButton6"
+                    Clicked="ImageButton6_Clicked"/>
+                    <Label
+                    Text="Quiz App"
+                    FontSize="30"
+                    HorizontalOptions="Start"/>
+                    <Label
+                    Text="Do you know your Stardew Valley Facts?? Prove yourself with this quiz!"
+                    FontSize="20"
+                    HorizontalOptions="Start"/>
+                    <Label
+                    Text="Rating: 10/10"
+                    FontSize="25"
+                    HorizontalOptions="Start"/>
+                </VerticalStackLayout>
+            </Grid>
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>

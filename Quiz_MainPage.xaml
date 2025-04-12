@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="THEArcadeAppAV.Quiz_MainPage"
+             Title="Quiz_MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout BackgroundColor="ForestGreen" Spacing="50" Padding="10">
+            <Label Text="STARDEW VALLEY QUIZ" 
+                   TextColor="Black" 
+                   HorizontalOptions="CenterAndExpand" 
+                   FontSize="40"></Label>
+            <VerticalStackLayout WidthRequest="600" BackgroundColor="YellowGreen">
+                <Label
+                Text="What is this?"
+                TextColor="Black"
+                FontSize="30"
+                Padding="5"
+                HorizontalOptions="Center"/>
+                <Image Source="greenman.jpg" MinimumHeightRequest="500" MinimumWidthRequest="250"/>
+                <Grid BackgroundColor="Yellow" WidthRequest="500" HeightRequest="140" ColumnSpacing="20" Padding="20" RowSpacing="15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Button x:Name="Answer1" Clicked="Answer1_Clicked" BackgroundColor="Black" Grid.Row="0" Grid.Column="0" HeightRequest="50" Text="Junimo" TextColor="White"/>
+                    <Button x:Name="Answer2" Clicked="Answer2_Clicked" BackgroundColor="Black" Grid.Row="1" Grid.Column="0" HeightRequest="50" Text="Green apple" TextColor="White"/>
+                    <Button x:Name="Answer3" Clicked="Answer3_Clicked" BackgroundColor="Black" Grid.Row="0" Grid.Column="1" HeightRequest="50" Text="Emily" TextColor="White"/>
+                    <Button x:Name="Answer4" Clicked="Answer4_Clicked" BackgroundColor="Black" Grid.Row="1" Grid.Column="1" HeightRequest="50" Text="Joja" TextColor="White"/>
+                </Grid>
+                <Entry x:Name="question1"
+                       Margin="0, 8, 0, 8"
+                       WidthRequest="500"
+                       HeightRequest="20"
+                       Placeholder="Type answer here!"
+                       PlaceholderColor="Aquamarine"
+                       BackgroundColor="BlueViolet"
+                       TextColor="Black"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout WidthRequest="600" BackgroundColor="YellowGreen">
+                <Label
+                Text="Who is the Father of Abigal?"
+                TextColor="Black"
+                FontSize="30"
+                Padding="5"
+                HorizontalOptions="Center"/>
+                <Image Source="abigal.jpg" MinimumHeightRequest="500" MinimumWidthRequest="250"/>
+                <Grid BackgroundColor="Yellow" WidthRequest="500" HeightRequest="140" ColumnSpacing="20" Padding="20" RowSpacing="15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Button BackgroundColor="Black" Grid.Row="0" Grid.Column="0" HeightRequest="50" Text="The Wizard" TextColor="White"/>
+                    <Button BackgroundColor="Black" Grid.Row="1" Grid.Column="0" HeightRequest="50" Text="Pierre" TextColor="White"/>
+                    <Button BackgroundColor="Black" Grid.Row="0" Grid.Column="1" HeightRequest="50" Text="Sean" TextColor="White"/>
+                    <Button BackgroundColor="Black" Grid.Row="1" Grid.Column="1" HeightRequest="50" Text="Clint" TextColor="White"/>
+                </Grid>
+                <Entry x:Name="question2"
+                       Margin="0, 8, 0, 8"
+                       WidthRequest="500"
+                       HeightRequest="20"
+                       Placeholder="Type answer here!"
+                       PlaceholderColor="Aquamarine"
+                       BackgroundColor="BlueViolet"
+                       TextColor="Black"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout WidthRequest="600" BackgroundColor="YellowGreen">
+                <Label
+                Text="Who is this?"
+                TextColor="Black"
+                FontSize="30"
+                Padding="5"
+                HorizontalOptions="Center"/>
+                <Image Source="clint.jpg" MinimumHeightRequest="500" MinimumWidthRequest="250"/>
+                <Grid BackgroundColor="Yellow" WidthRequest="500" HeightRequest="140" ColumnSpacing="20" Padding="20" RowSpacing="15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Button BackgroundColor="Black" Grid.Row="0" Grid.Column="0" HeightRequest="50" Text="Clint" TextColor="White"/>
+                    <Button BackgroundColor="Black" Grid.Row="1" Grid.Column="0" HeightRequest="50" Text="Sebastian" TextColor="White"/>
+                    <Button BackgroundColor="Black" Grid.Row="0" Grid.Column="1" HeightRequest="50" Text="Joja" TextColor="White"/>
+                    <Button BackgroundColor="Black" Grid.Row="1" Grid.Column="1" HeightRequest="50" Text="The Farmer" TextColor="White"/>
+                </Grid>
+                <Entry x:Name="question3"
+                       Margin="0, 8, 0, 8"
+                       WidthRequest="500"
+                       HeightRequest="20"
+                       Placeholder="Type answer here!"
+                       PlaceholderColor="Aquamarine"
+                       BackgroundColor="BlueViolet"
+                       TextColor="Black"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout WidthRequest="600" BackgroundColor="YellowGreen">
+                <Label
+                Text="What kind of chicken is this?"
+                TextColor="Black"
+                FontSize="30"
+                Padding="5"
+                HorizontalOptions="Center"/>
+                <Image Source="blue.jpg" MinimumHeightRequest="500" MinimumWidthRequest="250"/>
+                <Grid BackgroundColor="Yellow" WidthRequest="500" HeightRequest="140" ColumnSpacing="20" Padding="20" RowSpacing="15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Button BackgroundColor="Black" Grid.Row="0" Grid.Column="0" HeightRequest="50" Text="White" TextColor="White"/>
+                    <Button BackgroundColor="Black" Grid.Row="1" Grid.Column="0" HeightRequest="50" Text="Blue" TextColor="White"/>
+                    <Button BackgroundColor="Black" Grid.Row="0" Grid.Column="1" HeightRequest="50" Text="Brown" TextColor="White"/>
+                    <Button BackgroundColor="Black" Grid.Row="1" Grid.Column="1" HeightRequest="50" Text="Void" TextColor="White"/>
+                </Grid>
+                <Entry x:Name="question4"
+                       Margin="0, 8, 0, 8"
+                       WidthRequest="500"
+                       HeightRequest="20"
+                       Placeholder="Type answer here!"
+                       PlaceholderColor="Aquamarine"
+                       BackgroundColor="BlueViolet"
+                       TextColor="Black"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout WidthRequest="600" BackgroundColor="YellowGreen">
+                <Label
+    Text="Who is the Mayor?"
+    TextColor="Black"
+    FontSize="30"
+    Padding="5"
+    HorizontalOptions="Center"/>
+                <Image Source="lewis.jpg" MinimumHeightRequest="500" MinimumWidthRequest="250"/>
+                <Grid BackgroundColor="Yellow" WidthRequest="500" HeightRequest="140" ColumnSpacing="20" Padding="20" RowSpacing="15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Button BackgroundColor="Black" Grid.Row="0" Grid.Column="0" HeightRequest="50" Text="Joja" TextColor="White"/>
+                    <Button BackgroundColor="Black" Grid.Row="1" Grid.Column="0" HeightRequest="50" Text="Lewis" TextColor="White"/>
+                    <Button BackgroundColor="Black" Grid.Row="0" Grid.Column="1" HeightRequest="50" Text="Linus" TextColor="White"/>
+                    <Button BackgroundColor="Black" Grid.Row="1" Grid.Column="1" HeightRequest="50" Text="The Wizard" TextColor="White"/>
+                </Grid>
+                <Entry x:Name="question5"
+           Margin="0, 8, 0, 8"
+           WidthRequest="500"
+           HeightRequest="20"
+           Placeholder="Type answer here!"
+           PlaceholderColor="Aquamarine"
+           BackgroundColor="BlueViolet"
+           TextColor="Black"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout WidthRequest="600" BackgroundColor="YellowGreen">
+                <Label
+                 Text="What is this?"
+                 TextColor="Black"
+                 FontSize="30"
+                 Padding="5"
+                 HorizontalOptions="Center"/>
+                <Image Source="coral.png" MinimumHeightRequest="500" MinimumWidthRequest="250"/>
+                <Grid BackgroundColor="Yellow" WidthRequest="500" HeightRequest="140" ColumnSpacing="20" Padding="20" RowSpacing="15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Button BackgroundColor="Black" Grid.Row="0" Grid.Column="0" HeightRequest="50" Text="Crab" TextColor="White"/>
+                    <Button BackgroundColor="Black" Grid.Row="1" Grid.Column="0" HeightRequest="50" Text="Coral" TextColor="White"/>
+                    <Button BackgroundColor="Black" Grid.Row="0" Grid.Column="1" HeightRequest="50" Text="Sea Urchin" TextColor="White"/>
+                    <Button BackgroundColor="Black" Grid.Row="1" Grid.Column="1" HeightRequest="50" Text="Newspaper" TextColor="White"/>
+                </Grid>
+                <Entry x:Name="question6"
+           Margin="0, 8, 0, 8"
+           WidthRequest="500"
+           HeightRequest="20"
+           Placeholder="Type answer here!"
+           PlaceholderColor="Aquamarine"
+           BackgroundColor="BlueViolet"
+           TextColor="Black"/>
+            </VerticalStackLayout>
+
+
+
+            <VerticalStackLayout WidthRequest="600" BackgroundColor="YellowGreen">
+                <Label
+    Text="What crop is this?"
+    TextColor="Black"
+    FontSize="30"
+    Padding="5"
+    HorizontalOptions="Center"/>
+                <Image Source="hot_pepper.png" MinimumHeightRequest="500" MinimumWidthRequest="250"/>
+                <Grid BackgroundColor="Yellow" WidthRequest="500" HeightRequest="140" ColumnSpacing="20" Padding="20" RowSpacing="15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Button BackgroundColor="Black" Grid.Row="0" Grid.Column="0" HeightRequest="50" Text="Rice" TextColor="White"/>
+                    <Button BackgroundColor="Black" Grid.Row="1" Grid.Column="0" HeightRequest="50" Text="Hot Pepper" TextColor="White"/>
+                    <Button BackgroundColor="Black" Grid.Row="0" Grid.Column="1" HeightRequest="50" Text="Eggplant" TextColor="White"/>
+                    <Button BackgroundColor="Black" Grid.Row="1" Grid.Column="1" HeightRequest="50" Text="Pumpkin" TextColor="White"/>
+                </Grid>
+                <Entry x:Name="question7"
+           Margin="0, 8, 0, 8"
+           WidthRequest="500"
+           HeightRequest="20"
+           Placeholder="Type answer here!"
+           PlaceholderColor="Aquamarine"
+           BackgroundColor="BlueViolet"
+           TextColor="Black"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout WidthRequest="600" BackgroundColor="YellowGreen">
+                <Label
+    Text="Who is this?"
+    TextColor="Black"
+    FontSize="30"
+    Padding="5"
+    HorizontalOptions="Center"/>
+                <Image Source="robin.png" MinimumHeightRequest="500" MinimumWidthRequest="250"/>
+                <Grid BackgroundColor="Yellow" WidthRequest="500" HeightRequest="140" ColumnSpacing="20" Padding="20" RowSpacing="15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Button BackgroundColor="Black" Grid.Row="0" Grid.Column="0" HeightRequest="50" Text="Emily" TextColor="White"/>
+                    <Button BackgroundColor="Black" Grid.Row="1" Grid.Column="0" HeightRequest="50" Text="Robin" TextColor="White"/>
+                    <Button BackgroundColor="Black" Grid.Row="0" Grid.Column="1" HeightRequest="50" Text="Leah" TextColor="White"/>
+                    <Button BackgroundColor="Black" Grid.Row="1" Grid.Column="1" HeightRequest="50" Text="The Farmer" TextColor="White"/>
+                </Grid>
+                <Entry x:Name="question8"
+           Margin="0, 8, 0, 8"
+           WidthRequest="500"
+           HeightRequest="20"
+           Placeholder="Type answer here!"
+           PlaceholderColor="Aquamarine"
+           BackgroundColor="BlueViolet"
+           TextColor="Black"/>
+            </VerticalStackLayout>
+
+
+            <VerticalStackLayout WidthRequest="600" BackgroundColor="YellowGreen">
+                <Label
+    Text="What fish is this?"
+    TextColor="Black"
+    FontSize="30"
+    Padding="5"
+    HorizontalOptions="Center"/>
+                <Image Source="tuna.png" MinimumHeightRequest="500" MinimumWidthRequest="250"/>
+                <Grid BackgroundColor="Yellow" WidthRequest="500" HeightRequest="140" ColumnSpacing="20" Padding="20" RowSpacing="15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Button BackgroundColor="Black" Grid.Row="0" Grid.Column="0" HeightRequest="50" Text="Eel" TextColor="White"/>
+                    <Button BackgroundColor="Black" Grid.Row="1" Grid.Column="0" HeightRequest="50" Text="Pufferfish" TextColor="White"/>
+                    <Button BackgroundColor="Black" Grid.Row="0" Grid.Column="1" HeightRequest="50" Text="Tuna" TextColor="White"/>
+                    <Button BackgroundColor="Black" Grid.Row="1" Grid.Column="1" HeightRequest="50" Text="Squid" TextColor="White"/>
+                </Grid>
+                <Entry x:Name="question9"
+           Margin="0, 8, 0, 8"
+           WidthRequest="500"
+           HeightRequest="20"
+           Placeholder="Type answer here!"
+           PlaceholderColor="Aquamarine"
+           BackgroundColor="BlueViolet"
+           TextColor="Black"/>
+            </VerticalStackLayout>
+
+
+
+            <VerticalStackLayout WidthRequest="600" BackgroundColor="YellowGreen">
+                <Label
+    Text="What does SDV mean?"
+    TextColor="Black"
+    FontSize="30"
+    Padding="5"
+    HorizontalOptions="Center"/>
+                <Image Source="stardewvalley.jpg" MinimumHeightRequest="500" MinimumWidthRequest="250"/>
+                <Grid BackgroundColor="Yellow" WidthRequest="500" HeightRequest="140" ColumnSpacing="20" Padding="20" RowSpacing="15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Button BackgroundColor="Black" Grid.Row="0" Grid.Column="0" HeightRequest="50" Text="Super Dinners Vary" TextColor="White"/>
+                    <Button BackgroundColor="Black" Grid.Row="1" Grid.Column="0" HeightRequest="50" Text="Stardew Valley" TextColor="White"/>
+                    <Button BackgroundColor="Black" Grid.Row="0" Grid.Column="1" HeightRequest="50" Text="Starting Darkness Valley" TextColor="White"/>
+                    <Button BackgroundColor="Black" Grid.Row="1" Grid.Column="1" HeightRequest="50" Text="I don't know" TextColor="White"/>
+                </Grid>
+                <Entry x:Name="question10"
+           Margin="0, 8, 0, 8"
+           WidthRequest="500"
+           HeightRequest="20"
+           Placeholder="Type answer here!"
+           PlaceholderColor="Aquamarine"
+           BackgroundColor="BlueViolet"
+           TextColor="Black"/>
+            </VerticalStackLayout>
+
+            <Button x:Name="Submit_Button"
+                    Clicked="Submit_Button_Clicked"
+                    Text="Submit"
+                    BackgroundColor="LightSeaGreen"
+                    TextColor="Black"
+                    WidthRequest="200"
+                    FontSize="30"
+                    Margin="0,0,30,0"/>
+        </VerticalStackLayout>
+    </ScrollView>    
+    
+</ContentPage>
