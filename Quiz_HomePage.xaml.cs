@@ -10,7 +10,7 @@ public partial class Quiz_HomePage : ContentPage
 
     private void Grid_SizeChanged(object sender, EventArgs e)
     {
-        if (Width < 400 || Height < 600)
+         if (Width < 400 || Height < 600)
         {
             Title1.FontSize = 53;
             Title2.FontSize = 53;
@@ -46,4 +46,25 @@ public partial class Quiz_HomePage : ContentPage
         }
     }
 
+    private async void Button1_Clicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("quiz_main");
+    }
+
+    private async void Button3_Clicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("arcade_main");
+    }
+
+    private void Button1_Clicked1(object sender, EventArgs e)
+    {
+    }
+
+    private void Grid_SizeChanged1(object sender, EventArgs e)
+    {
+    }
+
+    private void Grid_SizeChanged2(object sender, EventArgs e)
+    {
+    }
 }

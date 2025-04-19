@@ -3,10 +3,78 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="THEArcadeAppAV.Story_MainPage"
              Title="Story_MainPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+
+    <ScrollView x:Name="scrollview">
+        <VerticalStackLayout>
+            <!-- Page 1 -->
+            <Grid x:Name="Page_1">
+                <Image
+                    x:Name="Page_1_IMG"
+                    Source="clint.png"
+                    Aspect="AspectFill"
+                    HorizontalOptions="FillAndExpand"
+                    MaximumWidthRequest="1500"/>
+            <Button
+                x:Name="Page_1_ToggleButton"
+                BackgroundColor="WhiteSmoke"
+                WidthRequest="500"
+                VerticalOptions="Start"
+                BorderColor="Black"
+                BorderWidth="3"
+                Text="Toggle Text"
+                TextColor="Black"
+                FontSize="18"
+                Padding="0"/>
+            <Border
+                x:Name="Page_1_TextBox"
+                WidthRequest="500"
+                HeightRequest="350"
+                BackgroundColor="Whitesmoke"
+                Stroke="Black"
+                StrokeThickness="3"
+                StrokeShape="RoundRectangle 40,0,40,0"
+                VerticalOptions="Start"
+                Margin="0, 80, 0, 0">
+            </Border>
+            <Label
+                x:Name="Page_1_Text"
+                Text="Oh Farmer, I was looking for you! I don't know if you had noticed, but Clint has been missing for awhile now. As Mayor, I am unable to look for him due to my duties. Though, I am sure that you would be able to find him!"
+            />
+            <Button
+                x:Name="Page_1_Choice1"
+                WidthRequest="200"
+                HeightRequest="50"
+                VerticalOptions="Center"
+                Margin="0,300, 300, 0"
+                Text="Look for Clint"
+                TextColor="Black"
+                FontSize="15"
+                BorderColor="Black"
+                BorderWidth="3"/>
+            <Button
+                x:Name="Page_1_Choice2"
+                WidthRequest="200"
+                HeightRequest="50"
+                VerticalOptions="Center"
+                Margin="0,300, 300, 0"
+                Text="Dont look for Clint"
+                TextColor="Black"
+                FontSize="15"
+                BorderColor="Black"
+                BorderWidth="3"/>
+            </Grid>
+
+            <!-- Page2a -->
+            <Grid x:Name="Page_2a" IsVisible="false">
+                <Image
+                    x:Name="Page_2a_IMG"
+                    Source="lewis.jpg"
+                    Aspect="AspectFill"
+                    HorizontalOptions="FillAndExpand"
+                    MaximumWidthRequest="1500"/>
+            </Grid>
+
+            
+        </VerticalStackLayout>
+    </ScrollView>    
 </ContentPage>

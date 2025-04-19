@@ -1,12 +1,72 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="THEArcadeAppAV.Story_Homepage"
-             Title="Story_Homepage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             x:Class="THEArcadeAppAV.Story_HomePage"
+             Title="Story_HomePage">
+
+    <Grid>
+        <Image
+            Source="homepagebackground.png"
+            Aspect="AspectFill"/>
+        <Label
+            TextColor="Goldenrod"
+            Text="STARDEW VALLEY"
+            FontAttributes="Bold"
+            FontSize="80"
+            VerticalOptions="Start"
+            HorizontalOptions="Center"
+            Margin="0,150,0,150"
+            x:Name="Title1Story"/>
+        <Label
+            TextColor="Goldenrod"
+            Text="SAVE THE TOWN"
+            FontAttributes="Bold"
+            FontSize="80"
+            VerticalOptions="Start"
+            HorizontalOptions="Center"
+            Margin="0,225,0,225"
+            x:Name="Title2Story"/>
+        <Button
+            Text="Play"
+            WidthRequest="200"
+            HeightRequest="75"
+            BackgroundColor="Tan"
+            BorderWidth="5"
+            BorderColor="SaddleBrown"
+            TextColor="SaddleBrown"
+            FontAttributes="Bold"
+            FontSize="25"
+            VerticalOptions="End"
+            Margin="-600, 0, 0, 200"
+            x:Name="Button1Story"
+            Clicked="Button1Story_Clicked"/>
+        <Button
+            Text="High Scores"
+            WidthRequest="200"
+            HeightRequest="75"
+            BackgroundColor="Tan"
+            BorderWidth="5"
+            BorderColor="SaddleBrown"
+            TextColor="SaddleBrown"
+            FontAttributes="Bold"
+            FontSize="25"
+            VerticalOptions="End"
+            Margin="0, 0, 0, 200"
+            x:Name="Button2Story"/>
+        <Button
+            Text="Leave"
+            WidthRequest="200"
+            HeightRequest="75"
+            BackgroundColor="Tan"
+            BorderWidth="5"
+            BorderColor="SaddleBrown"
+            TextColor="SaddleBrown"
+            FontAttributes="Bold"
+            FontSize="25"
+            VerticalOptions="End"
+            Margin="600, 0, 0, 200"
+            x:Name="Button3Story"
+            Clicked="Button3Story_Clicked"/>
+    </Grid>
+
 </ContentPage>

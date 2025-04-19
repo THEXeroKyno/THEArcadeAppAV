@@ -1,4 +1,6 @@
-﻿namespace THEArcadeAppAV
+﻿using System.Threading.Tasks;
+
+namespace THEArcadeAppAV
 {
     public partial class MainPage : ContentPage
     {
@@ -7,13 +9,15 @@
             InitializeComponent();
         }
 
-        private void ImageButton1_Clicked(Object sender, EventArgs e)
+        private async void ImageButton1_Clicked(object sender, EventArgs e)
         {
             ImageButton1.BackgroundColor = Colors.Aquamarine;
+            await Shell.Current.GoToAsync("quiz_home");
         }
-        private void ImageButton2_Clicked(Object sender, EventArgs e)
+        private async void ImageButton2_Clicked(Object sender, EventArgs e)
         {
-            ImageButton2.BackgroundColor = Colors.LightGray;
+            ImageButton2.BackgroundColor = Colors.DarkRed;
+            await Shell.Current.GoToAsync("story_home");
         }
         private void ImageButton3_Clicked(Object sender, EventArgs e)
         {
@@ -31,6 +35,8 @@
         {
             ImageButton6.BackgroundColor = Colors.LightGray;
         }
+
+
     }
 
 }
