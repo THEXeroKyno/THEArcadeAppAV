@@ -7,11 +7,13 @@ public partial class Story_HomePage : ContentPage
 		InitializeComponent();
 	}
 
-    private void Button1Story_Clicked(object sender, EventArgs e)
+    private async void Button1Story_Clicked(object sender, EventArgs e)
     {
+		await Shell.Current.GoToAsync("story_main");
     }
 
-    private void Button3Story_Clicked(object sender, EventArgs e)
+    private async void Button3Story_Clicked(object sender, EventArgs e)
     {
+		await Shell.Current.GoToAsync("arcade_main");
     }
 }
