@@ -6,7 +6,7 @@
 
     <Grid>
         <Image
-            Source="homepagebackground.png"
+            Source="storynight.jpg"
             Aspect="AspectFill"/>
         <Label
             TextColor="Goldenrod"
