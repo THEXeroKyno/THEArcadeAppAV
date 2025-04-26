@@ -15,7 +15,7 @@
                     HorizontalOptions="FillAndExpand"
                     MaximumWidthRequest="1500"/>
             <Button
-                x:Name="Page_1_ToggleButton"
+                x:Name="Page_1_ToggleButton_Story"
                 BackgroundColor="WhiteSmoke"
                 WidthRequest="500"
                 VerticalOptions="Start"
@@ -72,9 +72,21 @@
                     Aspect="AspectFill"
                     HorizontalOptions="FillAndExpand"
                     MaximumWidthRequest="1500"/>
+                <Button
+                    x:Name="Page_2a_ToggleButton"
+                    BackgroundColor="WhiteSmoke"
+                    WidthRequest="500"
+                    VerticalOptions="Start"
+                    BorderColor="Black"
+                    BorderWidth="3"
+                    Text="Toggle Text"
+                    TextColor="Black"
+                    FontSize="18"
+                    Padding="0"/>                    
             </Grid>
 
-            
+            <!-- Page2b -->
+            <Grid x:Name="Page_2b" IsVisible="False"/>
         </VerticalStackLayout>
     </ScrollView>    
 </ContentPage>
