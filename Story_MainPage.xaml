@@ -82,7 +82,17 @@
                     Text="Toggle Text"
                     TextColor="Black"
                     FontSize="18"
-                    Padding="0"/>                    
+                    Padding="0"/>
+                <Border
+                    x:Name="Page_2a_TextBox"
+                    WidthRequest="500"
+                    HeightRequest="350"
+                    BackgroundColor="Whitesmoke"
+                    Stroke="Black"
+                    StrokeThickness="3"
+                StrokeShape="RoundRectangle 40,0,40,0"
+                VerticalOptions="Start"
+                Margin="0, 80, 0, 0"/>                   
             </Grid>
 
             <!-- Page2b -->
