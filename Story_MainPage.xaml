@@ -7,13 +7,14 @@
     <ScrollView x:Name="scrollview">
         <VerticalStackLayout>
             <!-- Page 1 -->
-            <Grid x:Name="Page_1">
+            <Grid x:Name="Page_1" SizeChanged="Page_1_SizeChanged">
                 <Image
                     x:Name="Page_1_IMG"
-                    Source="clint.png"
+                    Source="clint.jpg"
                     Aspect="AspectFill"
                     HorizontalOptions="FillAndExpand"
-                    MaximumWidthRequest="1500"/>
+                    MaximumWidthRequest="2560"
+                    MaximumHeightRequest="1664"/>
             <Button
                 x:Name="Page_1_ToggleButton_Story"
                 BackgroundColor="WhiteSmoke"
@@ -24,7 +25,8 @@
                 Text="Toggle Text"
                 TextColor="Black"
                 FontSize="18"
-                Padding="0"/>
+                Padding="0"
+                Clicked="Page_1_ToggleButton_Story_Clicked"/>
             <Border
                 x:Name="Page_1_TextBox"
                 WidthRequest="500"
@@ -35,24 +37,17 @@
                 StrokeShape="RoundRectangle 40,0,40,0"
                 VerticalOptions="Start"
                 Margin="0, 80, 0, 0">
-            </Border>
-            <Label
+                <Label
                 x:Name="Page_1_Text"
                 Text="Oh Farmer, I was looking for you! I don't know if you had noticed, but Clint has been missing for awhile now. As Mayor, I am unable to look for him due to my duties. Though, I am sure that you would be able to find him!"
+                TextColor ="black"
+                Padding="10"
+                FontSize="18"
             />
+            </Border>
+            
             <Button
                 x:Name="Page_1_Choice1"
-                WidthRequest="200"
-                HeightRequest="50"
-                VerticalOptions="Center"
-                Margin="0,300, 300, 0"
-                Text="Look for Clint"
-                TextColor="Black"
-                FontSize="15"
-                BorderColor="Black"
-                BorderWidth="3"/>
-            <Button
-                x:Name="Page_1_Choice2"
                 WidthRequest="200"
                 HeightRequest="50"
                 VerticalOptions="Center"
@@ -61,42 +56,230 @@
                 TextColor="Black"
                 FontSize="15"
                 BorderColor="Black"
-                BorderWidth="3"/>
+                BorderWidth="3"
+                Clicked="Page_1_Choice1_Clicked"/>
+            <Button
+                x:Name="Page_1_Choice2"
+                WidthRequest="200"
+                HeightRequest="50"
+                VerticalOptions="Center"
+                Margin="300,300, 0, 0"
+                Text="Look for Clint"
+                TextColor="Black"
+                FontSize="15"
+                BorderColor="Black"
+                BorderWidth="3"
+                Clicked="Page_1_Choice2_Clicked"/>
             </Grid>
 
             <!-- Page2a -->
-            <Grid x:Name="Page_2a" IsVisible="false">
-                <Image
+            <Grid x:Name="Page_2a" IsVisible="False">            
+                            <Image
                     x:Name="Page_2a_IMG"
                     Source="lewis.jpg"
                     Aspect="AspectFill"
                     HorizontalOptions="FillAndExpand"
-                    MaximumWidthRequest="1500"/>
-                <Button
-                    x:Name="Page_2a_ToggleButton"
-                    BackgroundColor="WhiteSmoke"
-                    WidthRequest="500"
-                    VerticalOptions="Start"
-                    BorderColor="Black"
-                    BorderWidth="3"
-                    Text="Toggle Text"
-                    TextColor="Black"
-                    FontSize="18"
-                    Padding="0"/>
-                <Border
-                    x:Name="Page_2a_TextBox"
-                    WidthRequest="500"
-                    HeightRequest="350"
-                    BackgroundColor="Whitesmoke"
-                    Stroke="Black"
-                    StrokeThickness="3"
+                    MaximumWidthRequest="2560"
+                    MaximumHeightRequest="1664"/>
+            <Button
+                x:Name="Page_2a_ToggleButton_Story"
+                BackgroundColor="WhiteSmoke"
+                WidthRequest="500"
+                VerticalOptions="Start"
+                BorderColor="Black"
+                BorderWidth="3"
+                Text="Toggle Text"
+                TextColor="Black"
+                FontSize="18"
+                Padding="0"
+                Clicked="Page_2a_ToggleButton_Story_Clicked"/>
+            <Border
+                x:Name="Page_2a_TextBox"
+                WidthRequest="500"
+                HeightRequest="350"
+                BackgroundColor="Whitesmoke"
+                Stroke="Black"
+                StrokeThickness="3"
                 StrokeShape="RoundRectangle 40,0,40,0"
                 VerticalOptions="Start"
-                Margin="0, 80, 0, 0"/>                   
+                Margin="0, 80, 0, 0">
+                <Label
+                x:Name="Page_2a_Text"
+                Text="You go back to your farm, seeing no need to look for the blacksmith since all your tools were already upgraded to the max. You open your front door and see Clint on the ground, tied up and wiggling away. You place your foot upon his back, slowly adding more pressure. You tell him how the others are looking for him, but he will never be found. You remind him how he is now useless to this town, and you will take over in his spot. Tears roll down his face. What will you do with him?"
+                TextColor ="black"
+                Padding="10"
+                FontSize="18"
+            />
+            </Border>
+            
+            <Button
+                x:Name="Page_2a_Choice1"
+                WidthRequest="200"
+                HeightRequest="50"
+                VerticalOptions="Center"
+                Margin="0,300, 300, 0"
+                Text="Kill him"
+                TextColor="Black"
+                FontSize="15"
+                BorderColor="Black"
+                BorderWidth="3"
+                Clicked="Page_2a_Choice1_Clicked"/>
+            <Button
+                x:Name="Page_2a_Choice2"
+                WidthRequest="200"
+                HeightRequest="50"
+                VerticalOptions="Center"
+                Margin="300,300, 0, 0"
+                Text="Make people forget"
+                TextColor="Black"
+                FontSize="15"
+                BorderColor="Black"
+                BorderWidth="3"
+                Clicked="Page_2a_Choice2_Clicked"/>
             </Grid>
 
             <!-- Page2b -->
-            <Grid x:Name="Page_2b" IsVisible="False"/>
+            <Grid x:Name="Page_2b" IsVisible="False">            
+                            <Image
+                    x:Name="Page_2b_IMG"
+                    Source="abigal.jpg"
+                    Aspect="AspectFill"
+                    HorizontalOptions="FillAndExpand"
+                    MaximumWidthRequest="2560"
+                    MaximumHeightRequest="1664"/>
+            <Button
+                x:Name="Page_2b_ToggleButton_Story"
+                BackgroundColor="WhiteSmoke"
+                WidthRequest="500"
+                VerticalOptions="Start"
+                BorderColor="Black"
+                BorderWidth="3"
+                Text="Toggle Text"
+                TextColor="Black"
+                FontSize="18"
+                Padding="0"
+                Clicked="Page_2b_ToggleButton_Story_Clicked"/>
+            <Border
+                x:Name="Page_2b_TextBox"
+                WidthRequest="500"
+                HeightRequest="350"
+                BackgroundColor="Whitesmoke"
+                Stroke="Black"
+                StrokeThickness="3"
+                StrokeShape="RoundRectangle 40,0,40,0"
+                VerticalOptions="Start"
+                Margin="0, 80, 0, 0">
+                <Label
+                x:Name="Page_2b_Text"
+                Text="Who will you talk to?"
+                TextColor ="black"
+                Padding="10"
+                FontSize="18"
+            />
+            </Border>
+            
+            <Button
+                x:Name="Page_2b_Choice1"
+                WidthRequest="200"
+                HeightRequest="50"
+                VerticalOptions="Center"
+                Margin="0,300, 300, 0"
+                Text="Penny"
+                TextColor="Black"
+                FontSize="15"
+                BorderColor="Black"
+                BorderWidth="3"/>
+            <Button
+                x:Name="Page_2b_Choice2"
+                WidthRequest="200"
+                HeightRequest="50"
+                VerticalOptions="Center"
+                Margin="300,300, 0, 0"
+                Text="Maru"
+                TextColor="Black"
+                FontSize="15"
+                BorderColor="Black"
+                BorderWidth="3"/>
+            </Grid>
+
+            <!-- Page3a -->
+            <Grid x:Name="Page_3a" IsVisible="False">            
+            <Image
+                    x:Name="Page_3a_IMG"
+                    Source="coral.png"
+                    Aspect="AspectFill"
+                    HorizontalOptions="FillAndExpand"
+                    MaximumWidthRequest="2560"
+                    MaximumHeightRequest="1664"/>
+            <Button
+                x:Name="Page_3a_ToggleButton_Story"
+                BackgroundColor="WhiteSmoke"
+                WidthRequest="500"
+                VerticalOptions="Start"
+                BorderColor="Black"
+                BorderWidth="3"
+                Text="Toggle Text"
+                TextColor="Black"
+                FontSize="18"
+                Padding="0"
+                Clicked="Page_3a_ToggleButton_Story_Clicked"/>
+            <Border
+                x:Name="Page_3a_TextBox"
+                WidthRequest="600"
+                HeightRequest="450"
+                BackgroundColor="Whitesmoke"
+                Stroke="Black"
+                StrokeThickness="3"
+                StrokeShape="RoundRectangle 40,0,40,0"
+                VerticalOptions="Start"
+                Margin="0, 80, 0, 0">
+            <Label
+                x:Name="Page_3a_Text"
+                Text="You take out your sword, showing Clint the sharp blade while telling him the range of monsters you had killed in the past. Slimes, Mummies, Skeletons, Dinosuars, even Serpents had fallen to your sword. Even, with all this blood on your sword, his was not worthy for it, and you let him know that. You throw your sword to the other side of the room and take out your hoe. This tool is used on dirt, the ground under your food, similar to how Clint is right now. Killing Clint with this tool is no different to hitting the ground that grows your crops. You slowly bring the weapon above your head before harshly bringing it down into his shoulder. He lets out a loud cry, his breath quickening. You remind him that no one can hear his screams, an advantage from living so far from the town. Bringing the tool above your head and bring it down onto his skull. A sickening crack echos against the walls and the smell of iron fills your home, the blood seeping into the wood lines of your house as Clint takes the last few breaths of his life."
+                TextColor ="black"
+                Padding="10"
+                FontSize="18"/>
+            </Border>
+            </Grid>  
+            <!--Page 3b-->
+        <Grid x:Name="Page_3b" IsVisible="False">            
+            <Image
+                    x:Name="Page_3b_IMG"
+                    Source="tuna.png"
+                    Aspect="AspectFill"
+                    HorizontalOptions="FillAndExpand"
+                    MaximumWidthRequest="2560"
+                    MaximumHeightRequest="1664"/>
+            <Button
+                x:Name="Page_3b_ToggleButton_Story"
+                BackgroundColor="WhiteSmoke"
+                WidthRequest="500"
+                VerticalOptions="Start"
+                BorderColor="Black"
+                BorderWidth="3"
+                Text="Toggle Text"
+                TextColor="Black"
+                FontSize="18"
+                Padding="0"
+                Clicked="Page_3b_ToggleButton_Story_Clicked"/>
+            <Border
+                x:Name="Page_3b_TextBox"
+                WidthRequest="600"
+                HeightRequest="450"
+                BackgroundColor="Whitesmoke"
+                Stroke="Black"
+                StrokeThickness="3"
+                StrokeShape="RoundRectangle 40,0,40,0"
+                VerticalOptions="Start"
+                Margin="0, 80, 0, 0">
+            <Label
+                x:Name="Page_3b_Text"
+                Text="siudghiaeuhdiuwhdiuw"
+                TextColor ="black"
+                Padding="10"
+                FontSize="18"/>
+            </Border>
+            </Grid>          
         </VerticalStackLayout>
     </ScrollView>    
 </ContentPage>
