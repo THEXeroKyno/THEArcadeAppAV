@@ -46,11 +46,12 @@
                 </VerticalStackLayout>
                 <VerticalStackLayout Grid.Column="1" Grid.Row="0" WidthRequest="600" Spacing="5">
                     <ImageButton
-                    Source="dotnet_bot.png"
+                    Source="cursed.png"
                     WidthRequest="600"
                     HeightRequest="400"
                     Padding="20"
                     Margin="10"
+                    BackgroundColor="DarkRed"
                     x:Name="ImageButton2"
                     Clicked="ImageButton2_Clicked"
                     />
@@ -59,17 +60,17 @@
                     FontSize="30"
                     HorizontalOptions="Start"/>
                     <Label
-                    Text="A killer in Pellican Town! Will you save the town??"
+                    Text="Clint is missing..."
                     FontSize="20"
                     HorizontalOptions="Start"/>
                     <Label
-                    Text="Rating: 10/10"
+                    Text="Rating: 8/10"
                     FontSize="25"
                     HorizontalOptions="Start"/>
                 </VerticalStackLayout>
                 <VerticalStackLayout Grid.Column="0" Grid.Row="1" WidthRequest="600" Spacing="5">
                     <ImageButton
-                    Source="dotnet_bot.png"
+                    Source="poopoo.png"
                     WidthRequest="600"
                     HeightRequest="400"
                     Padding="20"
@@ -77,11 +78,11 @@
                     x:Name="ImageButton3"
                     Clicked="ImageButton3_Clicked"/>
                     <Label
-                    Text="Quiz App"
+                    Text="Calculator App"
                     FontSize="30"
                     HorizontalOptions="Start"/>
                     <Label
-                    Text="Do you know your Stardew Valley Facts?? Prove yourself with this quiz!"
+                    Text="You suck at math, so I will help"
                     FontSize="20"
                     HorizontalOptions="Start"/>
                     <Label

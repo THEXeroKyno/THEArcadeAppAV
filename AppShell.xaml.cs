@@ -13,6 +13,8 @@
 
             Routing.RegisterRoute("story_home", typeof(Story_HomePage));
             Routing.RegisterRoute("story_main", typeof(Story_MainPage));
+
+            //Routing.RegisterRoute("Calculator", typeof(Calculator));
         }
     }
 }

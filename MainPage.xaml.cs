@@ -16,12 +16,13 @@ namespace THEArcadeAppAV
         }
         private async void ImageButton2_Clicked(Object sender, EventArgs e)
         {
-            ImageButton2.BackgroundColor = Colors.DarkRed;
+            ImageButton2.BackgroundColor = Colors.Red;
             await Shell.Current.GoToAsync("story_home");
         }
-        private void ImageButton3_Clicked(Object sender, EventArgs e)
+        private async void ImageButton3_Clicked(Object sender, EventArgs e)
         {
             ImageButton3.BackgroundColor = Colors.LightGray;
+            await Shell.Current.GoToAsync("Calculator");
         }
         private void ImageButton4_Clicked(Object sender, EventArgs e)
         {
