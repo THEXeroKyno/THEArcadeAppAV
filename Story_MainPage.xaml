@@ -132,7 +132,7 @@
                 Clicked="Page_2a_NEXT_Clicked"/>
             </Grid>
 
-            <!-- Page3a -->
+            <!-- Page3a HAS CHOICES-->
             <Grid x:Name="Page_3a" IsVisible="False">            
             <Image
                 x:Name="Page_3a_IMG"
@@ -258,7 +258,131 @@
                 BorderWidth="3"
                 Padding="0"
                 Clicked="Page_4a_NEXT_Clicked"/>
-            </Grid> 
+            </Grid>
+
+            <!-- Page5a -->
+             <Grid x:Name="Page_5a" IsVisible="False">            
+            <Image
+                x:Name="Page_5a_IMG"
+                Source="townbackground.jpg"
+                Aspect="AspectFill"
+                HorizontalOptions="FillAndExpand"
+                MaximumWidthRequest="2560"
+                MaximumHeightRequest="1150"/>
+            <Button
+                x:Name="Page_5a_ToggleButton_Story"
+                BackgroundColor="#FF7AEC7A"
+                WidthRequest="500"
+                VerticalOptions="End"
+                Margin="1400, 0, 0, 10"
+                BorderColor="Black"
+                BorderWidth="3"
+                Text="Toggle Text"
+                TextColor="Black"
+                FontSize="18"
+                Padding="0"
+                Clicked="Page_5a_ToggleButton_Story_Clicked"/>
+            <Border
+                x:Name="Page_5a_TextBox"
+                WidthRequest="1400"
+                HeightRequest="265"
+                BackgroundColor="Whitesmoke"
+                Stroke="Black"
+                StrokeThickness="3"
+                StrokeShape="RoundRectangle 0,0,0,0"
+                VerticalOptions="End"
+                Margin="0, 0, 500, 0">
+                <Label
+                x:Name="Page_4a_Text"
+                Text="This morning I had stopped by his workshop, he was not there. Not even in his room."
+                TextColor ="black"
+                Padding="40"
+                FontSize="25"/>
+            </Border>
+            <Label
+                x:Name="Page_5a_Character_Name"
+                Text="Mayor Lewis"
+                TextColor="Black"
+                FontSize="50"
+                FontAttributes="Bold"
+                VerticalOptions="Start"
+                Margin="50, 890, 0, 0"/>
+            <Button
+                x:Name="Page_5a_NEXT"
+                Text="Next"
+                BackgroundColor="#FF7AEC7A"
+                TextColor="Black"
+                FontSize="18"
+                VerticalOptions="End"
+                Margin="1400, 0, 0, 70"
+                WidthRequest="500"
+                BorderColor="Black"
+                BorderWidth="3"
+                Padding="0"
+                Clicked="Page_5a_NEXT_Clicked"/>
+            </Grid>
+
+            <!-- Page4b -->
+             <Grid x:Name="Page_4b" IsVisible="False">            
+            <Image
+                x:Name="Page_4b_IMG"
+                Source="townbackground.jpg"
+                Aspect="AspectFill"
+                HorizontalOptions="FillAndExpand"
+                MaximumWidthRequest="2560"
+                MaximumHeightRequest="1150"/>
+            <Button
+                x:Name="Page_4b_ToggleButton_Story"
+                BackgroundColor="#FF7AEC7A"
+                WidthRequest="500"
+                VerticalOptions="End"
+                Margin="1400, 0, 0, 10"
+                BorderColor="Black"
+                BorderWidth="3"
+                Text="Toggle Text"
+                TextColor="Black"
+                FontSize="18"
+                Padding="0"
+                Clicked="Page_4b_ToggleButton_Story_Clicked"/>
+            <Border
+                x:Name="Page_4b_TextBox"
+                WidthRequest="1400"
+                HeightRequest="265"
+                BackgroundColor="Whitesmoke"
+                Stroke="Black"
+                StrokeThickness="3"
+                StrokeShape="RoundRectangle 0,0,0,0"
+                VerticalOptions="End"
+                Margin="0, 0, 500, 0">
+                <Label
+                x:Name="Page_4b_Text"
+                Text="This morning I had stopped by his workshop, he was not there. Not even in his room."
+                TextColor ="black"
+                Padding="40"
+                FontSize="25"/>
+            </Border>
+            <Label
+                x:Name="Page_4b_Character_Name"
+                Text="Mayor Lewis"
+                TextColor="Black"
+                FontSize="50"
+                FontAttributes="Bold"
+                VerticalOptions="Start"
+                Margin="50, 890, 0, 0"/>
+            <Button
+                x:Name="Page_4b_NEXT"
+                Text="Next"
+                BackgroundColor="#FF7AEC7A"
+                TextColor="Black"
+                FontSize="18"
+                VerticalOptions="End"
+                Margin="1400, 0, 0, 70"
+                WidthRequest="500"
+                BorderColor="Black"
+                BorderWidth="3"
+                Padding="0"
+                Clicked="Page_4b_NEXT_Clicked"/>
+            </Grid>
         </VerticalStackLayout>
     </ScrollView>    
 </ContentPage>

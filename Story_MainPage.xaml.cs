@@ -96,7 +96,7 @@ public partial class Story_MainPage : ContentPage
 	}
 
 	
-	/////// Buttons for Page 3a //////////
+	/////// Buttons for Page 3a which has choices to pick //////////
 
   private void Page_3a_ToggleButton_Story_Clicked(object sender, EventArgs e)
     {
@@ -142,9 +142,26 @@ public partial class Story_MainPage : ContentPage
 
     }
 
-  
+	////// Buttons for Page 4b //////////////
+
+    private void Page_4b_ToggleButton_Story_Clicked(object sender, EventArgs e)
+    {
+    }
+
+    private void Page_4b_NEXT_Clicked(object sender, EventArgs e)
+    {
+    }
+
+  //////// Button for Page 5a ///////////////
+    private void Page_5a_NEXT_Clicked(object sender, EventArgs e)
+    {
+    }
+
+    private void Page_5a_ToggleButton_Story_Clicked(object sender, EventArgs e)
+    {
+		
+    }
 
 
-  //////// Button for Page 3b ///////////////
 
 }
