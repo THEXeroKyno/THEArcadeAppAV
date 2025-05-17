@@ -98,7 +98,35 @@ public partial class Story_MainPage : ContentPage
 	
 	/////// Buttons for Page 3a //////////
 
+  private void Page_3a_ToggleButton_Story_Clicked(object sender, EventArgs e)
+    {
+		if (Page_3a_textbox.IsVisible == true)
+		{
+			Page_3a_textbox.IsVisible = false;
+		}
+		else
+		{
+			Page_3a_textbox.IsVisible = true;
+		}
 
+		if (Page_3a_Choice1.IsVisible == true)
+		{
+			Page_3a_Choice1.IsVisible = false;
+		}
+		else
+		{
+			Page_3a_Choice1.IsVisible = true;
+		}
+
+		if (Page_3a_Choice2.IsVisible == true)
+		{
+			Page_3a_Choice2.IsVisible = false;
+		}
+		else 
+		{
+			Page_3a_Choice2.IsVisible = true;
+		}
+    }
 
 
     
@@ -113,6 +141,8 @@ public partial class Story_MainPage : ContentPage
     {
 
     }
+
+  
 
 
   //////// Button for Page 3b ///////////////

@@ -152,9 +152,10 @@
                 Text="Toggle Text"
                 TextColor="Black"
                 FontSize="18"
-                Padding="0"/>
+                Padding="0"
+                Clicked="Page_3a_ToggleButton_Story_Clicked"/>
             <Border
-                x:Name="PAGE_3a_textbox"
+                x:Name="Page_3a_textbox"
                 WidthRequest="1400"
                 HeightRequest="265"
                 BackgroundColor="Whitesmoke"
