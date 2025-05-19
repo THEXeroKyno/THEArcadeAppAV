@@ -182,7 +182,8 @@
                 FontSize="20"
                 BorderColor="Black"
                 BorderWidth="3"
-                BackgroundColor="#FF7AEC7A"/>
+                BackgroundColor="#FF7AEC7A"
+                Clicked="Page_3a_Choice1_Clicked"/>
             <Button
                 x:Name="Page_3a_Choice2"
                 WidthRequest="500"
@@ -194,7 +195,8 @@
                 FontSize="20"
                 BorderColor="Black"
                 BorderWidth="3"
-                BackgroundColor="#FF7AEC7A"/>
+                BackgroundColor="#FF7AEC7A"
+                Clicked="Page_3a_Choice2_Clicked"/>
             </Grid>
 
             <!-- Page4a -->
@@ -293,7 +295,7 @@
                 VerticalOptions="End"
                 Margin="0, 0, 500, 0">
                 <Label
-                x:Name="Page_4a_Text"
+                x:Name="Page_5a_Text"
                 Text="This morning I had stopped by his workshop, he was not there. Not even in his room."
                 TextColor ="black"
                 Padding="40"
@@ -356,7 +358,7 @@
                 Margin="0, 0, 500, 0">
                 <Label
                 x:Name="Page_4b_Text"
-                Text="This morning I had stopped by his workshop, he was not there. Not even in his room."
+                Text="I was wondering if you are able to look for him?"
                 TextColor ="black"
                 Padding="40"
                 FontSize="25"/>
@@ -382,6 +384,135 @@
                 BorderWidth="3"
                 Padding="0"
                 Clicked="Page_4b_NEXT_Clicked"/>
+            </Grid>
+
+            <!-- Page5b HAS CHOICES -->
+            <Grid x:Name="Page_5b" IsVisible="False">            
+            <Image
+                x:Name="Page_5b_IMG"
+                Source="townbackground.jpg"
+                Aspect="AspectFill"
+                HorizontalOptions="FillAndExpand"
+                MaximumWidthRequest="2560"
+                MaximumHeightRequest="1150"/>
+            <Button
+                x:Name="Page_5b_ToggleButton_Story"
+                BackgroundColor="#FF7AEC7A"
+                WidthRequest="500"
+                VerticalOptions="End"
+                Margin="1400, 0, 0, 10"
+                BorderColor="Black"
+                BorderWidth="3"
+                Text="Toggle Text"
+                TextColor="Black"
+                FontSize="18"
+                Padding="0"
+                Clicked="Page_5b_ToggleButton_Story_Clicked"/>
+            <Border
+                x:Name="Page_5b_TextBox"
+                WidthRequest="1400"
+                HeightRequest="265"
+                BackgroundColor="Whitesmoke"
+                Stroke="Black"
+                StrokeThickness="3"
+                StrokeShape="RoundRectangle 0,0,0,0"
+                VerticalOptions="End"
+                Margin="0, 0, 500, 0">
+                <Label
+                x:Name="Page_5b_Text"
+                Text="Pick your answer"
+                TextColor ="black"
+                Padding="40"
+                FontSize="25"/>
+            </Border>         
+            <Button
+                x:Name="Page_5b_Choice1"
+                WidthRequest="500"
+                HeightRequest="50"
+                VerticalOptions="Center"
+                Margin="0,300, 0, 0"
+                Text="No"
+                TextColor="Black"
+                FontSize="20"
+                BorderColor="Black"
+                BorderWidth="3"
+                BackgroundColor="#FF7AEC7A"
+                Clicked="Page_5b_Choice1_Clicked"/>
+            <Button
+                x:Name="Page_5b_Choice2"
+                WidthRequest="500"
+                HeightRequest="50"
+                VerticalOptions="Center"
+                Margin="0,150, 0, 0"
+                Text="Yes"
+                TextColor="Black"
+                FontSize="20"
+                BorderColor="Black"
+                BorderWidth="3"
+                BackgroundColor="#FF7AEC7A"
+                Clicked="Page_5b_Choice2_Clicked"/>
+            </Grid>
+
+             <!-- Page6a -->
+            <Grid x:Name="Page_6a" IsVisible="False">            
+            <Image
+                x:Name="Page_6a_IMG"
+                Source="townbackground.jpg"
+                Aspect="AspectFill"
+                HorizontalOptions="FillAndExpand"
+                MaximumWidthRequest="2560"
+                MaximumHeightRequest="1150"/>
+            <Button
+                x:Name="Page_6a_ToggleButton_Story"
+                BackgroundColor="#FF7AEC7A"
+                WidthRequest="500"
+                VerticalOptions="End"
+                Margin="1400, 0, 0, 10"
+                BorderColor="Black"
+                BorderWidth="3"
+                Text="Toggle Text"
+                TextColor="Black"
+                FontSize="18"
+                Padding="0"
+                Clicked="Page_6a_ToggleButton_Story_Clicked"/>
+            <Border
+                x:Name="Page_6a_TextBox"
+                WidthRequest="1400"
+                HeightRequest="265"
+                BackgroundColor="Whitesmoke"
+                Stroke="Black"
+                StrokeThickness="3"
+                StrokeShape="RoundRectangle 0,0,0,0"
+                VerticalOptions="End"
+                Margin="0, 0, 500, 0">
+                <Label
+                x:Name="Page_6a_Text"
+                Text="Ah...Okay. Have a good day Farmer."
+                TextColor ="black"
+                Padding="40"
+                FontSize="25"/>
+            </Border>
+            <Label
+                x:Name="Page_6a_Character_Name"
+                Text="Mayor Lewis"
+                TextColor="Black"
+                FontSize="50"
+                FontAttributes="Bold"
+                VerticalOptions="Start"
+                Margin="50, 890, 0, 0"/>
+            <Button
+                x:Name="Page_6a_NEXT"
+                Text="Next"
+                BackgroundColor="#FF7AEC7A"
+                TextColor="Black"
+                FontSize="18"
+                VerticalOptions="End"
+                Margin="1400, 0, 0, 70"
+                WidthRequest="500"
+                BorderColor="Black"
+                BorderWidth="3"
+                Padding="0"
+                Clicked="Page_6a_NEXT_Clicked"/>
             </Grid>
         </VerticalStackLayout>
     </ScrollView>    
