@@ -15,6 +15,9 @@
             Routing.RegisterRoute("story_main", typeof(Story_MainPage));
 
             //Routing.RegisterRoute("Calculator", typeof(Calculator));
+
+            Routing.RegisterRoute("Platform_home", typeof(Platform_homepage));
+            Routing.RegisterRoute("Platform_main", typeof(platform_mainpage));
         }
     }
 }

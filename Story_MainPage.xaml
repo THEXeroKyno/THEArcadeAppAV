@@ -514,6 +514,9 @@
                 Padding="0"
                 Clicked="Page_6a_NEXT_Clicked"/>
             </Grid>
+
+             <!-- Page6b -->
+                         
         </VerticalStackLayout>
     </ScrollView>    
 </ContentPage>

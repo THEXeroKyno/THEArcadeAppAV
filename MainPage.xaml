@@ -97,15 +97,16 @@
                     HeightRequest="400"
                     Padding="20"
                     Margin="10"
+                    BackgroundColor="#FF50F2EF"
                     x:Name="ImageButton4"
                     Clicked="ImageButton4_Clicked"
                     />
                     <Label
-                    Text="Quiz App"
+                    Text="Platform App"
                     FontSize="30"
                     HorizontalOptions="Start"/>
                     <Label
-                    Text="Do you know your Stardew Valley Facts?? Prove yourself with this quiz!"
+                    Text="How good are you at surviving?"
                     FontSize="20"
                     HorizontalOptions="Start"/>
                     <Label
