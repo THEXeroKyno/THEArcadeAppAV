@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="THEArcadeAppAV.Platform_MainPage"
+             Title="Platform_MainPage">
+    <AbsoluteLayout
+        x:Name="Canvas" Background="DarkGreen">
+        <Grid
+            x:Name="gameGrid"
+            BackgroundColor="SkyBlue"
+            RowDefinitions= "*,*,*,*,*"
+            ColumnDefinitions="*,*,*,*,*"
+            RowSpacing="1"
+            ColumnSpacing="1"
+            AbsoluteLayout.LayoutBounds="0, 0, 1.0, 0.9"
+            AbsoluteLayout.LayoutFlags="SizeProportional"
+        />
+        <Button
+            x:Name="Start_Button"
+            Text="Start!"
+            TextColor="Black"
+            FontSize="30"
+            BackgroundColor="LightGreen"
+            Clicked="Start_Button_Clicked"
+            AbsoluteLayout.LayoutBounds="0.5, 1.0, 200, 0.1"
+            AbsoluteLayout.LayoutFlags="PositionProportional, HeightProportional"
+        />
+        <Button
+            x:Name="Reset_Button"
+            Text="Reset!"
+            TextColor="Black"
+            FontSize="30"
+            BackgroundColor="lightgreen"
+            Clicked="Reset_Button_Clicked"
+            AbsoluteLayout.LayoutBounds="1.0, 1.0, 200, 0.1"
+            AbsoluteLayout.LayoutFlags="PositionProportional,HeightProportional"
+            />
+    </AbsoluteLayout>
+</ContentPage>

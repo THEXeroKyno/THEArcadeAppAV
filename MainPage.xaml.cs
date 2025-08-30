@@ -24,10 +24,13 @@ namespace THEArcadeAppAV
             ImageButton3.BackgroundColor = Colors.LightGray;
             await Shell.Current.GoToAsync("Calculator");
         }
-        private void ImageButton4_Clicked(Object sender, EventArgs e)
+
+        private async void ImageButton4_Clicked(object sender, EventArgs e)
         {
-            ImageButton4.BackgroundColor = Colors.LightGray;
+            ImageButton4.BackgroundColor = Colors.DarkBlue;
+            await Shell.Current.GoToAsync("Platform");
         }
+
         private void ImageButton5_Clicked(Object sender, EventArgs e)
         {
             ImageButton5.BackgroundColor = Colors.LightGray;
@@ -36,6 +39,8 @@ namespace THEArcadeAppAV
         {
             ImageButton6.BackgroundColor = Colors.LightGray;
         }
+
+
 
 
     }

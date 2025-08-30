@@ -16,8 +16,8 @@
 
             //Routing.RegisterRoute("Calculator", typeof(Calculator));
 
-            Routing.RegisterRoute("Platform_home", typeof(Platform_homepage));
-            Routing.RegisterRoute("Platform_main", typeof(platform_mainpage));
+            Routing.RegisterRoute("Platform_home", typeof(Platform_HomePage));
+            Routing.RegisterRoute("Platform_main", typeof(Platform_MainPage));
         }
     }
 }

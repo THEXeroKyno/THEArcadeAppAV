@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="THEArcadeAppAV.Platform_homepage"
-             Title="Platform_homepage">
+             x:Class="THEArcadeAppAV.Platform_HomePage"
+             Title="Platform_HomePage">
 
     <Grid>
         <Image
@@ -39,7 +39,7 @@
             VerticalOptions="End"
             Margin="-600, 0, 0, 200"
             x:Name="Button1Game"
-            Clicked="Button1Gamer_clicked"/>
+            />
         <Button
             Text="High Scores"
             WidthRequest="200"
@@ -52,7 +52,7 @@
             FontSize="25"
             VerticalOptions="End"
             Margin="0, 0, 0, 200"
-            x:Name="Button2Story"
+            x:Name="Button2game"
             />
         <Button
             Text="Leave"
@@ -66,6 +66,6 @@
             FontSize="25"
             VerticalOptions="End"
             Margin="600, 0, 0, 200"
-            x:Name="Button3Story" 
-            Clicked="Button3Story_clicked"/>
-    </Grid>
+            x:Name="Button3game"
+           />
+    </Grid> </ContentPage>
