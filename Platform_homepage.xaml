@@ -16,16 +16,16 @@
             VerticalOptions="Start"
             HorizontalOptions="Center"
             Margin="0,150,0,150"
-            x:Name="GameName1"/>
+            x:Name="Title1Game"/>
         <Label
             TextColor="Goldenrod"
-            Text="SAVE THE TOWN"
+            Text="SAVE THE YOURSELF"
             FontAttributes="Bold"
             FontSize="80"
             VerticalOptions="Start"
             HorizontalOptions="Center"
             Margin="0,225,0,225"
-            x:Name="GameName2"/>
+            x:Name="Title2Game"/>
         <Button
             Text="Play"
             WidthRequest="200"
@@ -38,8 +38,7 @@
             FontSize="25"
             VerticalOptions="End"
             Margin="-600, 0, 0, 200"
-            x:Name="Button1Game"
-            />
+            x:Name="Button1Game"/>
         <Button
             Text="High Scores"
             WidthRequest="200"
@@ -52,8 +51,7 @@
             FontSize="25"
             VerticalOptions="End"
             Margin="0, 0, 0, 200"
-            x:Name="Button2game"
-            />
+            x:Name="Button2Game"/>
         <Button
             Text="Leave"
             WidthRequest="200"
@@ -66,6 +64,7 @@
             FontSize="25"
             VerticalOptions="End"
             Margin="600, 0, 0, 200"
-            x:Name="Button3game"
-           />
-    </Grid> </ContentPage>
+            x:Name="Button3Game"/>
+    </Grid>
+
+</ContentPage>
