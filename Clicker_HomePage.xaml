@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="THEArcadeAppAV.Clicker_HomePage"
+             Title="Clicker_HomePage">
+
+
+    <Grid>
+        <Image
+            Source="sopretty.jpg"
+            Aspect="AspectFill"/>
+        <Label
+            TextColor="Goldenrod"
+            Text="Click on Junimo"
+            FontAttributes="Bold"
+            FontSize="80"
+            VerticalOptions="Start"
+            HorizontalOptions="Center"
+            Margin="0,150,0,150"
+            x:Name="Title1Game"/>
+        <Button
+            Text="Play"
+            WidthRequest="200"
+            HeightRequest="75"
+            BackgroundColor="Tan"
+            BorderWidth="5"
+            BorderColor="SaddleBrown"
+            TextColor="SaddleBrown"
+            FontAttributes="Bold"
+            FontSize="25"
+            VerticalOptions="End"
+            Margin="-600, 0, 0, 200"
+            x:Name="Button1Game"
+            Clicked="Button1Game_Clicked"
+            />
+        <Button
+            Text="High Scores"
+            WidthRequest="200"
+            HeightRequest="75"
+            BackgroundColor="Tan"
+            BorderWidth="5"
+            BorderColor="SaddleBrown"
+            TextColor="SaddleBrown"
+            FontAttributes="Bold"
+            FontSize="25"
+            VerticalOptions="End"
+            Margin="0, 0, 0, 200"
+            x:Name="Button2Game"/>
+        <Button
+            Text="Leave"
+            WidthRequest="200"
+            HeightRequest="75"
+            BackgroundColor="Tan"
+            BorderWidth="5"
+            BorderColor="SaddleBrown"
+            TextColor="SaddleBrown"
+            FontAttributes="Bold"
+            FontSize="25"
+            VerticalOptions="End"
+            Margin="600, 0, 0, 200"
+            x:Name="Button3Game"
+            Clicked="Button3Game_Clicked"/>
+    </Grid>
+
+</ContentPage>

@@ -34,7 +34,7 @@ namespace THEArcadeAppAV
         private async void ImageButton5_Clicked(Object sender, EventArgs e)
         {
             ImageButton5.BackgroundColor = Colors.LightGray;
-            //await Shell.Current.GoToAsync("Clicker_home");
+            await Shell.Current.GoToAsync("Clicker_home");
         }
         private void ImageButton6_Clicked(Object sender, EventArgs e)
         {

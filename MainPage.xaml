@@ -116,7 +116,7 @@
                 </VerticalStackLayout>
                 <VerticalStackLayout Grid.Column="0" Grid.Row="2" WidthRequest="600" Spacing="5">
                     <ImageButton
-                    Source="dotnet_bot.png"
+                    Source="greenman.jpg"
                     WidthRequest="600"
                     HeightRequest="400"
                     Padding="20"
@@ -124,7 +124,7 @@
                     x:Name="ImageButton5"
                     Clicked="ImageButton5_Clicked"/>
                     <Label
-                    Text="Quiz App"
+                    Text="Junimo Clicker"
                     FontSize="30"
                     HorizontalOptions="Start"/>
                     <Label

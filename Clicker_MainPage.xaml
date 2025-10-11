@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="THEArcadeAppAV.Clicker_MainPage"
+             Title="Clicker_MainPage">
+<AbsoluteLayout BackgroundColor="Beige">
+<HorizontalStackLayout>
+    <Image
+        Source="noback.png"
+        WidthRequest="700"
+        HeightRequest="700"
+        Margin="100, 100, 0, 0"
+    />
+
+    <VerticalStackLayout>
+        <Border
+            x:Name="money"
+            WidthRequest="1000"
+            HeightRequest="200"
+            BackgroundColor="#f9d387"
+            Stroke="#e88c14"
+            StrokeThickness="25"
+            StrokeShape="RoundRectangle 300,20,300,20"
+            VerticalOptions="End"
+            Margin="-100, 0, 1000, 0"
+        />
+        <Border
+            x:Name="Gman"
+            WidthRequest="150"
+            HeightRequest="200"
+            BackgroundColor="#e88c14"
+            Stroke="#e88c14"
+            StrokeThickness="25"
+            StrokeShape="RoundRectangle 300,20,300,20"
+            VerticalOptions="End"
+            Margin="-300, -200, 1600, 0"
+        />
+            
+    </VerticalStackLayout>
+</HorizontalStackLayout>
+
+</AbsoluteLayout>
+</ContentPage>
