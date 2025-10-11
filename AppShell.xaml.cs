@@ -18,6 +18,9 @@
 
             Routing.RegisterRoute("Platform_home", typeof(Platform_HomePage));
             Routing.RegisterRoute("Platform_main", typeof(Platform_MainPage));
+
+            //Routing.RegisterRoute("Clicker_home", typeof(Clicker_HomePage));
+            //Routing.RegisterRoute("Clicker_main", typeof(Clicker_MainPage));
         }
     }
 }

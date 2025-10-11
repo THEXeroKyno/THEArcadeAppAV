@@ -28,12 +28,13 @@ namespace THEArcadeAppAV
         private async void ImageButton4_Clicked(object sender, EventArgs e)
         {
             ImageButton4.BackgroundColor = Colors.DarkBlue;
-            await Shell.Current.GoToAsync("Platform_main");
+            await Shell.Current.GoToAsync("Platform_home");
         }
 
-        private void ImageButton5_Clicked(Object sender, EventArgs e)
+        private async Task ImageButton5_Clicked(Object sender, EventArgs e)
         {
             ImageButton5.BackgroundColor = Colors.LightGray;
+            await Shell.Current.GoToAsync("Clicker_home");
         }
         private void ImageButton6_Clicked(Object sender, EventArgs e)
         {

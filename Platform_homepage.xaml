@@ -38,7 +38,9 @@
             FontSize="25"
             VerticalOptions="End"
             Margin="-600, 0, 0, 200"
-            x:Name="Button1Game"/>
+            x:Name="Button1Game"
+            Clicked="Button1Game_Clicked"
+            />
         <Button
             Text="High Scores"
             WidthRequest="200"
@@ -64,7 +66,8 @@
             FontSize="25"
             VerticalOptions="End"
             Margin="600, 0, 0, 200"
-            x:Name="Button3Game"/>
+            x:Name="Button3Game"
+            Clicked="Button3Game_Clicked"/>
     </Grid>
 
 </ContentPage>
