@@ -11,7 +11,23 @@
         HeightRequest="700"
         Margin="100, 100, 0, 0"
     />
-
+    <Label
+        Text="G"
+        TextColor="#77330b"
+        ZIndex="2"
+        FontSize="200"
+        Margin="100, -40, -490, 0"
+    />
+    <Border
+        WidthRequest="200"
+        HeightRequest="200"
+        ZIndex="1"
+        Stroke="#e88c14"
+        BackgroundColor="#e88c14"
+        StrokeShape="RoundRectangle 300,20,300,20"
+        Margin="320, -600, 0, 0"
+    /> 
+       
     <VerticalStackLayout>
         <Border
             x:Name="money"
@@ -22,20 +38,8 @@
             StrokeThickness="25"
             StrokeShape="RoundRectangle 300,20,300,20"
             VerticalOptions="End"
-            Margin="-100, 0, 1000, 0"
-        />
-        <Border
-            x:Name="Gman"
-            WidthRequest="150"
-            HeightRequest="200"
-            BackgroundColor="#e88c14"
-            Stroke="#e88c14"
-            StrokeThickness="25"
-            StrokeShape="RoundRectangle 300,20,300,20"
-            VerticalOptions="End"
-            Margin="-300, -200, 1600, 0"
-        />
-            
+            Margin="-200, 0, 0, 0"
+        />     
     </VerticalStackLayout>
 </HorizontalStackLayout>
 
