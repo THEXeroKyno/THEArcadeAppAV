@@ -24,14 +24,16 @@
     </Border>
 </HorizontalStackLayout>
 
-<HorizontalStackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.04, 0.4, 0.2, 0.2">
+<HorizontalStackLayout x:Name="objectclicked" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.04, 0.4, 0.7, 0.7">
     <Image Source="noback.png" WidthRequest="900" HeightRequest="900">
         <Image.GestureRecognizers>
             <TapGestureRecognizer Tapped="JunimoTapped"/>
         </Image.GestureRecognizers>
     </Image>
+    <Image Source="yay.png" x:Name="firstimage" WidthRequest="250" HeightRequest="250" ZIndex="3" Margin="-580, -800, 0, 0" IsVisible="True"></Image>
+    <Image Source="yayy.png" x:Name="secondimage" WidthRequest="250" HeightRequest="250" ZIndex="2" Margin="-580, -800, 0, 0" IsVisible="False" ></Image>
 </HorizontalStackLayout>
-<VerticalStackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.85, 0.27, 0.2, 0.2" Spacing="60">
+<VerticalStackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.85, 0.65, 0.2, 0.6" Spacing="60">
     <Button
         x:Name="FirstUpgrade"
         WidthRequest="400"
@@ -66,9 +68,13 @@
         BackgroundColor="#f9d387"
         BorderWidth="20"
         BorderColor="#e88c14"
-        FontSize="30"
-        Text="aiwjdaojdifuejnkrg"
+        FontSize="25"
+        Text="upgrade interest: G 10000"
+        Clicked="ThirdUpgrade_Clicked"
     />
+    <HorizontalStackLayout x:Name="acheievementpopuplayout" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5, 1, 0.8, 0.8">
+        
+    </HorizontalStackLayout>
 </VerticalStackLayout>
 </AbsoluteLayout>
 </ContentPage>
