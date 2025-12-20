@@ -21,6 +21,11 @@
 
             Routing.RegisterRoute("Clicker_home", typeof(Clicker_HomePage));
             Routing.RegisterRoute("Clicker_main", typeof(Clicker_MainPage));
+
+            Routing.RegisterRoute("signingup", typeof(Signup));
+            Routing.RegisterRoute("Logingin", typeof(Login));
+
+            Routing.RegisterRoute("simulator", typeof(Simulator));
         }
     }
 }

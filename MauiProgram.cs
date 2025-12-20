@@ -15,6 +15,11 @@ namespace THEArcadeAppAV
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+                string dbpath = System.IO.Path.Combine(FileSystem.AppDataDirectory, "user.db3");
+                builder.Services.AddSingleton<UserRepository>(
+                    s => ActivatorUtilities.CreateInstance<UserRepository>(s, dbpath)
+                );
+
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif

@@ -8,8 +8,8 @@
     Title="THEArcadeAppAV">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Title="Arcade App"
+        ContentTemplate="{DataTemplate local:Login}"
+        Route="Login" />
 
 </Shell>

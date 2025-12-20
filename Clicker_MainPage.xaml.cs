@@ -12,7 +12,7 @@ public partial class Clicker_MainPage : ContentPage
     public Bank Bankk = new Bank("Adrienne", 0, 10, 100, 1);
     public Clicker clickerr = new Clicker(1, 5, 1);
     public PassiveIncome PassiveIncomee = new PassiveIncome(0, 100, 1);
-    public Interest interest = new Interest(0, 10000, 1);
+    public Interest interest = new Interest(1, 10000, 1);
 
 
     public static string[] acheievements = new string[4]
@@ -124,8 +124,8 @@ public partial class Clicker_MainPage : ContentPage
         }
         public void Upgrade()
         {
-            interest_value += 5;
-            interest_cost = interest_cost * 2 - 250;
+            interest_value += 10;
+            interest_cost = interest_cost * 2 + 250;
             interest_level++;
         }
     }
@@ -175,10 +175,10 @@ public partial class Clicker_MainPage : ContentPage
 
     private async void JunimoTapped(object sender, TappedEventArgs e)
     {
-        Bankk.addBalance(clickerr.clicker_Value);
+        Bankk.addBalance(clickerr.clicker_Value * interest.interest_value);
         acheievementcheckfunction();
         changeMoney_label();
-        await Showpopupasync("+" + clickerr.clicker_Value);
+        await Showpopupasync("+" + clickerr.clicker_Value * interest.interest_value);
     }
 
     private async void FirstUpgrade_Clicked(object sender, EventArgs e)
@@ -224,10 +224,10 @@ public partial class Clicker_MainPage : ContentPage
     
     async public void PassiveIncomeee()
     {
-        Bankk.addBalance(PassiveIncomee.passiveincome_Value);
+        Bankk.balance += PassiveIncomee.passiveincome_Value * interest.interest_value;
         acheievementcheckfunction();
         changeMoney_label();
-        await Showpopupasync("+" + clickerr.clicker_Value);
+        await Showpopupasync("+" + PassiveIncomee.passiveincome_Value * interest.interest_value);
         await Task.Delay(1000);
         PassiveIncomeee();
     }

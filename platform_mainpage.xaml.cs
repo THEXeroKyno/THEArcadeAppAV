@@ -314,13 +314,13 @@ public class Clint
         user = userplayer;
     }
 
-    //oscillate funtion
+    //clint oscillate funtion
     async public void oscillate(Grid g, Platform_MainPage page)
     {
         int boundaryleft = 0;
         int boundaryright = 4;
         var rand = new Random();
-        await Task.Delay(rand.Next(500));
+        await Task.Delay(rand.Next(700));
         Moveleft(g, boundaryleft, boundaryright, page); //start movement START OF LOOP
     }
     //moveleft function
