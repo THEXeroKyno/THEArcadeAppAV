@@ -4,11 +4,12 @@
              x:Class="THEArcadeAppAV.MainPage">
 
     <ScrollView>
-        <AbsoluteLayout BackgroundColor="Black" HeightRequest="1200">
+        <AbsoluteLayout BackgroundColor="Black" HeightRequest="1600">
             <Grid
                 AbsoluteLayout.LayoutBounds="0,0,1,1"
                 AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional">
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
@@ -164,7 +165,34 @@
                     AbsoluteLayout.LayoutBounds="0, 1.025, 1, 0.075"
                     AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
                 </AbsoluteLayout>
+                <AbsoluteLayout Grid.Column="0" Grid.Row="3" HeightRequest="400" Padding="10">
+                    <ImageButton
+                    Source="yayy.png"
+                    AbsoluteLayout.LayoutBounds="0, 0, 1, 0.8"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"
+                    x:Name="ImageButton7"
+                    Clicked="ImageButton7_Clicked"/>
+                    <Label
+                    Text="Weather"
+                    FontSize="30"
+                    AbsoluteLayout.LayoutBounds="0, 0.9, 1, 0.1"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                    <Label
+                    Text="OPEN SOME CARDS!"
+                    FontSize="20"
+                    AbsoluteLayout.LayoutBounds="0, 0.95,1,0.075"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                    <Label
+                    Text="Rating: 10/10"
+                    FontSize="25"
+                    AbsoluteLayout.LayoutBounds="0, 1.025, 1, 0.075"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                </AbsoluteLayout>
             </Grid>
+            <Button
+                Text="Inventory"
+                x:Name="InvButton"
+                Clicked="InvButton_Clicked"/>
         </AbsoluteLayout>
 
     </ScrollView>

@@ -42,6 +42,15 @@ namespace THEArcadeAppAV
             await Shell.Current.GoToAsync("simulator");
         }
 
+        private async void InvButton_Clicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("inv");   
+        }
+
+        private void ImageButton7_Clicked(object sender, EventArgs e)
+        {
+        }
+
 
 
 

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="THEArcadeAppAV.Inv"
+             Title="Inv">
+    <ScrollView>
+        <AbsoluteLayout BackgroundColor="Black" HeightRequest="2400">
+            <Grid
+                AbsoluteLayout.LayoutBounds="0,0,1,1"
+                AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <AbsoluteLayout Grid.Column="0" Grid.Row="0" HeightRequest="400" Padding="10">
+                    <Image
+                    Source="a1.png"
+                    AbsoluteLayout.LayoutBounds="0, 0, 1, 0.8"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                    <Label
+                    Text=""
+                    x:Name="nobackLabel"
+                    FontSize="25"
+                    AbsoluteLayout.LayoutBounds="0, 1.025, 1, 0.075"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                </AbsoluteLayout>
+
+
+                <AbsoluteLayout Grid.Column="1" Grid.Row="0" HeightRequest="400" Padding="10">
+                    <Image
+                    Source="a2.png"
+                    AbsoluteLayout.LayoutBounds="0, 0, 1, 0.8"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                    <Label
+                    Text=""
+                    x:Name="hotpepperLabel"
+                    FontSize="25"
+                    AbsoluteLayout.LayoutBounds="0, 1.025, 1, 0.075"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                </AbsoluteLayout>
+
+
+                <AbsoluteLayout Grid.Column="0" Grid.Row="1"  HeightRequest="400" Padding="10">
+                    <Image
+                    Source="a3.png"
+                    AbsoluteLayout.LayoutBounds="0, 0, 1, 0.8"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                    <Label
+                    Text=""
+                    x:Name="CursedLabel"
+                    FontSize="25"
+                    AbsoluteLayout.LayoutBounds="0, 1.025, 1, 0.075"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                </AbsoluteLayout>
+
+                <AbsoluteLayout Grid.Column="1" Grid.Row="1"  HeightRequest="400" Padding="10">
+                    <Image
+                    Source="a4.png"
+                    AbsoluteLayout.LayoutBounds="0, 0, 1, 0.8"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                    <Label
+                    Text=""
+                    x:Name="CoralLabel"
+                    FontSize="25"
+                    AbsoluteLayout.LayoutBounds="0, 1.025, 1, 0.075"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                </AbsoluteLayout>
+
+
+                <AbsoluteLayout Grid.Column="0" Grid.Row="2" HeightRequest="400" Padding="10">
+                    <Image
+                    Source="a5.png"
+                    AbsoluteLayout.LayoutBounds="0, 0, 1, 0.8"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                    <Label
+                    Text=""
+                    x:Name="blueLabel"
+                    FontSize="25"
+                    AbsoluteLayout.LayoutBounds="0, 1.025, 1, 0.075"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                </AbsoluteLayout>
+
+
+                <AbsoluteLayout Grid.Column="1" Grid.Row="2" HeightRequest="400" Padding="10">
+                    <Image
+                    Source="a6.png"
+                    AbsoluteLayout.LayoutBounds="0, 0, 1, 0.8"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                    <Label
+                    Text=""
+                    x:Name="abigalLabel"
+                    FontSize="25"
+                    AbsoluteLayout.LayoutBounds="0, 1.025, 1, 0.075"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                </AbsoluteLayout>
+
+                <AbsoluteLayout Grid.Column="0" Grid.Row="3" HeightRequest="400" Padding="10">
+                    <Image
+                    Source="a7.png"
+                    AbsoluteLayout.LayoutBounds="0, 0, 1, 0.8"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                    <Label
+                    Text=""
+                    x:Name="robinLabel"
+                    FontSize="25"
+                    AbsoluteLayout.LayoutBounds="0, 1.025, 1, 0.075"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                </AbsoluteLayout>
+
+                <AbsoluteLayout Grid.Column="1" Grid.Row="3" HeightRequest="400" Padding="10">
+                    <Image
+                    Source="a8.png"
+                    AbsoluteLayout.LayoutBounds="0, 0, 1, 0.8"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                    <Label
+                    Text=""
+                    x:Name="greenmanLabel"
+                    FontSize="25"
+                    AbsoluteLayout.LayoutBounds="0, 1.025, 1, 0.075"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                </AbsoluteLayout>
+                
+                <AbsoluteLayout Grid.Column="0" Grid.Row="4" HeightRequest="400" Padding="10">
+                    <Image
+                    Source="a9.png"
+                    AbsoluteLayout.LayoutBounds="0, 0, 1, 0.8"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                    <Label
+                    Text=""
+                    x:Name="tunaLabel"
+                    FontSize="25"
+                    AbsoluteLayout.LayoutBounds="0, 1.025, 1, 0.075"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                </AbsoluteLayout>
+
+                <AbsoluteLayout Grid.Column="1" Grid.Row="4" HeightRequest="400" Padding="10">
+                    <Image
+                    Source="a10.png"
+                    AbsoluteLayout.LayoutBounds="0, 0, 1, 0.8"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                    <Label
+                    Text=""
+                    x:Name="yayLabel"
+                    FontSize="25"
+                    AbsoluteLayout.LayoutBounds="0, 1.025, 1, 0.075"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                </AbsoluteLayout>
+
+                <AbsoluteLayout Grid.Column="0" Grid.Row="5" HeightRequest="400" Padding="10">
+                    <Image
+                    Source="a11.png"
+                    AbsoluteLayout.LayoutBounds="0, 0, 1, 0.8"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                    <Label
+                    Text=""
+                    x:Name="yayyLabel"
+                    FontSize="25"
+                    AbsoluteLayout.LayoutBounds="0, 1.025, 1, 0.075"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                </AbsoluteLayout>
+
+                <AbsoluteLayout Grid.Column="1" Grid.Row="5" HeightRequest="400" Padding="10">
+                    <Image
+                    Source="a12.png"
+                    AbsoluteLayout.LayoutBounds="0, 0, 1, 0.8"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                    <Label
+                    Text=""
+                    x:Name="testingimageLabel"
+                    FontSize="25"
+                    AbsoluteLayout.LayoutBounds="0, 1.025, 1, 0.075"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                </AbsoluteLayout>
+
+            </Grid>
+        </AbsoluteLayout>
+    </ScrollView>
+</ContentPage>

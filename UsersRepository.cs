@@ -47,4 +47,26 @@ public class UserRepository
         //searches the database for an entry w a matching username
         return conn.Table<Users>().Where(u => u.Username == username).FirstOrDefault();
     }
+
+    public void UpdateUserFishCard(string username, string fishname, int value)
+    {
+        Init();
+
+        if(username != null)
+        {
+            Users user = conn.Table<Users>().Where(u => u.Username == username).FirstOrDefault();
+
+            if(user != null)
+            {
+                var column = typeof(Users).GetProperty(fishname);
+                if(column != null && column.PropertyType == typeof(int))
+                {
+                    //ser new calue
+                    column.SetValue(user, value);
+                    //update user data
+                    conn.Update(user);
+                }
+            }
+        }
+    }
 }
