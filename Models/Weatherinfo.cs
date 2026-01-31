@@ -28,7 +28,6 @@ internal partial class Weatherinfo : ObservableObject
     private string temp;
     [ObservableProperty]
     private string wicon;
-
     [RelayCommand]
     private async Task FetchWeatherInformation()
     {
@@ -36,7 +35,7 @@ internal partial class Weatherinfo : ObservableObject
         if(WeatherApiReasonse.Current != null)
         {
             //wicon = WeatherApiReasonse.Current.WeatherIcons[0];
-            Temp = $"(weatherApiResonse.Current.temp)C";
+            Temp = $"{WeatherApiReasonse.Current.Temperature}C";
         }
     }
 }

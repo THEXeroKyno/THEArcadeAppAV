@@ -50,6 +50,6 @@ public class WeatherApiReasonseCurrent
 
         public int Temperature { get; set; }
         public int WeatherCode { get; set; }
-        public Uri[] WeatherIcons { get; set; }
+        public string[] WeatherIcons { get; set; }
         public string[] WeatherDescriptions { get; set; }
 }

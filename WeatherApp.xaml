@@ -10,7 +10,7 @@
         <Entry x:Name="State" Placeholder="State" TextColor="Black" BackgroundColor="White" Text="{Binding State}" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.4, 0.02, 0.25, 0.1"/>
         <Button x:Name="search" Text="Search" BackgroundColor="tan" Command="{Binding FetchWeatherInformationCommand}" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.7, 0.045, 0.15, 0.05"/>
         <Label x:Name="yeah" Text="placeholder" FontSize="35" TextColor="Black" BackgroundColor="White" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5, 0.15, 0.25, 0.1"/>
-        <Label x:Name="number" Text="{Binding Tempa}" FontSize="90" TextColor="Black" BackgroundColor="White" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.2, 0.65, 0.35, 0.4"/>
+        <Label x:Name="number" Text="{Binding Temp}" FontSize="90" TextColor="Black" BackgroundColor="White" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.2, 0.65, 0.35, 0.4"/>
         <Image Source="{Binding Weather_icon}" AbsoluteLayout.LayoutBounds="1, 0.65, 0.4, 0.5" AbsoluteLayout.LayoutFlags="All"/>
     </AbsoluteLayout>
 </ContentPage>
