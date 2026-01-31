@@ -28,6 +28,8 @@
             Routing.RegisterRoute("simulator", typeof(Simulator));
 
             Routing.RegisterRoute("inv", typeof(Inv));
+
+            Routing.RegisterRoute("weather", typeof(WeatherApp));
         }
     }
 }

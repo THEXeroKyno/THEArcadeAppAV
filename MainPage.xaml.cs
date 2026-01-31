@@ -47,8 +47,9 @@ namespace THEArcadeAppAV
             await Shell.Current.GoToAsync("inv");   
         }
 
-        private void ImageButton7_Clicked(object sender, EventArgs e)
+        private async void ImageButton7_Clicked(object sender, EventArgs e)
         {
+            await Shell.Current.GoToAsync("weather");   
         }
 
 
