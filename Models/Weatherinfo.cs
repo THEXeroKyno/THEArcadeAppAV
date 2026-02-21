@@ -26,6 +26,22 @@ internal partial class Weatherinfo : ObservableObject
     private string state;
     [ObservableProperty]
     private string temp;
+
+    [ObservableProperty]
+    private string weatherdescription;
+
+    [ObservableProperty]
+    private string feels_like;
+
+    [ObservableProperty]
+    private string humidity;
+
+    [ObservableProperty]
+    private string placeholder;
+
+    [ObservableProperty]
+    private string localtime;
+
     [ObservableProperty]
     private string wicon;
     [RelayCommand]
@@ -34,8 +50,18 @@ internal partial class Weatherinfo : ObservableObject
         var WeatherApiReasonse = await weatherApiService.GetWeatherInformation(city);
         if(WeatherApiReasonse.Current != null)
         {
-            //wicon = WeatherApiReasonse.Current.WeatherIcons[0];
+            Wicon = WeatherApiReasonse.Current.weather_icons[0];
             Temp = $"{WeatherApiReasonse.Current.Temperature}C";
+
+            Weatherdescription = $"{WeatherApiReasonse.Current.weather_descriptions[0]}";
+            
+            Feels_like = $"{WeatherApiReasonse.Current.feelslike}";
+
+            Humidity = $"{WeatherApiReasonse.Current.humidity}";
+
+            Localtime = $"{WeatherApiReasonse.Location.Localtime}";
+
+            Placeholder = $"{WeatherApiReasonse.Location.Name}, {WeatherApiReasonse.Location.Region}";
         }
     }
 }

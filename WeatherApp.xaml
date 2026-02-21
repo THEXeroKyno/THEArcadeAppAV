@@ -9,8 +9,14 @@
         <Entry x:Name="City" Placeholder="City" TextColor="Black" BackgroundColor="White" Text="{Binding City}" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.04, 0.02, 0.25, 0.1"/>
         <Entry x:Name="State" Placeholder="State" TextColor="Black" BackgroundColor="White" Text="{Binding State}" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.4, 0.02, 0.25, 0.1"/>
         <Button x:Name="search" Text="Search" BackgroundColor="tan" Command="{Binding FetchWeatherInformationCommand}" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.7, 0.045, 0.15, 0.05"/>
-        <Label x:Name="yeah" Text="placeholder" FontSize="35" TextColor="Black" BackgroundColor="White" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5, 0.15, 0.25, 0.1"/>
-        <Label x:Name="number" Text="{Binding Temp}" FontSize="90" TextColor="Black" BackgroundColor="White" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.2, 0.65, 0.35, 0.4"/>
-        <Image Source="{Binding Weather_icon}" AbsoluteLayout.LayoutBounds="1, 0.65, 0.4, 0.5" AbsoluteLayout.LayoutFlags="All"/>
+        <Label x:Name="yeah" Text="{Binding Placeholder}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="35" TextColor="Black" BackgroundColor="White" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5, 0.15, 0.25, 0.1"/>
+        <Label x:Name="number" Text="{Binding Temp}"  HorizontalTextAlignment="Center" FontSize="300" TextColor="Black" BackgroundColor="White" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.2, 0.65, 0.35, 0.4"/>
+        <Image Source="{Binding Wicon}" AbsoluteLayout.LayoutBounds="0.80, 0.65, 0.2, 0.3" AbsoluteLayout.LayoutFlags="All"/>
+        <Label x:Name="itis" Text="{Binding Weatherdescription}" FontSize="50" TextColor="Black" HorizontalTextAlignment="Center" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.82, 0.40, 0.25, 0.1"/>
+        <Label x:Name="feels" Text="It feels like" FontSize="50" TextColor="Black" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.163, 1, 0.15, 0.2"/>
+        <Label x:Name="feel" Text="{Binding Feels_like}" FontSize="50" TextColor="Black" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.32, 1, 0.15, 0.2"/>
+        <Label x:Name="nothumidity" Text="Humidity:" FontSize="25" TextColor="Black" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.163, 1.08, 0.15, 0.2"/>
+        <Label x:Name="THEhumidity" Text="{Binding Humidity}" FontSize="25" TextColor="Black" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.24, 1.08, 0.15, 0.2"/>
+        <Label x:Name="time" Text="{Binding Localtime}" HorizontalTextAlignment="Center" VerticalTextAlignment="End" FontSize="35" TextColor="Black" BackgroundColor="White" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5, 0.25, 0.17, 0.05"/>
     </AbsoluteLayout>
 </ContentPage>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="THEArcadeAppAV.Cat"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:vm="clr-namespace:THEArcadeAppAV.Models"
+             x:DataType="vm:Catinfo"
+             Title="Cat">
+    <AbsoluteLayout BackgroundColor="white">
+        <Label Text="CATS!" ZIndex="1" FontFamily="Comic Sans MS" FontSize="200" FontAttributes="Bold" TextColor="black" Rotation="-25" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0.06,0.4,0.2"/>
+        <Button x:Name="button" Text="Pwess hwere" ZIndex="0" FontFamily="Comic Sans MS" FontSize="50" BackgroundColor="White" BorderColor="Black" BorderWidth="20" AbsoluteLayout.LayoutBounds="0.65, 0.99, 0.2, 0.15" AbsoluteLayout.LayoutFlags="All"/>
+        <Image x:Name="randomcat" BackgroundColor="#FFEC9999" AbsoluteLayout.LayoutBounds="0.9, 0.2, 0.7, 0.8" AbsoluteLayout.LayoutFlags="All" Source="{Binding Catimage}"/>
+    </AbsoluteLayout>
+</ContentPage>

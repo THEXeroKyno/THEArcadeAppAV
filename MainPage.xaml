@@ -188,6 +188,29 @@
                     AbsoluteLayout.LayoutBounds="0, 1.025, 1, 0.075"
                     AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
                 </AbsoluteLayout>
+                <AbsoluteLayout Grid.Column="1" Grid.Row="3" HeightRequest="400" Padding="10">
+                    <ImageButton
+                    Source="tuna.png"
+                    AbsoluteLayout.LayoutBounds="0, 0, 1, 0.8"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"
+                    x:Name="ImageButton8"
+                    Clicked="ImageButton8_Clicked"/>
+                    <Label
+                    Text="Random cat images"
+                    FontSize="30"
+                    AbsoluteLayout.LayoutBounds="0, 0.9, 1, 0.1"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                    <Label
+                    Text="Want to see random images of cats? GO HERE?!?!?"
+                    FontSize="20"
+                    AbsoluteLayout.LayoutBounds="0, 0.95,1,0.075"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                    <Label
+                    Text="Rating: 10/10"
+                    FontSize="25"
+                    AbsoluteLayout.LayoutBounds="0, 1.025, 1, 0.075"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                </AbsoluteLayout>
             </Grid>
             <Button
                 Text="Inventory"

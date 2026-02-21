@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.Json.Serialization;
+using System.Threading.Tasks;
+
+namespace THEArcadeAppAV.Models.APIModels;
+
+public class CatApiResponse
+{
+        [JsonPropertyName("breeds")]
+        public object[] Breeds { get; set; }
+
+        [JsonPropertyName("id")]
+        public string Id { get; set; }
+
+        [JsonPropertyName("url")]
+        public string Url { get; set; }
+
+        [JsonPropertyName("width")]
+        public long Width { get; set; }
+
+        [JsonPropertyName("height")]
+        public long Height { get; set; }  
+}
