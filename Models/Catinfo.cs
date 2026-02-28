@@ -7,7 +7,7 @@ using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
 using THEArcadeAppAV.Services;
 using System.Text.Json.Serialization;
-
+/*
 namespace THEArcadeAppAV.Models;
 
 internal partial class Catinfo : ObservableObject
@@ -31,3 +31,4 @@ internal partial class Catinfo : ObservableObject
         }
     }
 }
+*/

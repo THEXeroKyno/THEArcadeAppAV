@@ -4,11 +4,12 @@
              x:Class="THEArcadeAppAV.MainPage">
 
     <ScrollView>
-        <AbsoluteLayout BackgroundColor="Black" HeightRequest="1600">
+        <AbsoluteLayout BackgroundColor="Black" HeightRequest="2000">
             <Grid
                 AbsoluteLayout.LayoutBounds="0,0,1,1"
                 AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional">
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>

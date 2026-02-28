@@ -12,6 +12,5 @@ public partial class Cat : ContentPage
     public Cat()
 	{
 		InitializeComponent();
-		BindingContext = new Catinfo();
 	}
 }

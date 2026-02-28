@@ -5,7 +5,7 @@ using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
 using THEArcadeAppAV.Models.APIModels;
-
+/*
 namespace THEArcadeAppAV.Services
 {
     internal class CatApiService
@@ -27,3 +27,4 @@ namespace THEArcadeAppAV.Services
         }
     }    
 }
+*/
