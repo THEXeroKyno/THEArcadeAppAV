@@ -32,6 +32,8 @@
             Routing.RegisterRoute("weather", typeof(WeatherApp));
 
             Routing.RegisterRoute("kitty", typeof(Cat));
+
+            Routing.RegisterRoute("tictactoe", typeof(Robot));
         }
     }
 }

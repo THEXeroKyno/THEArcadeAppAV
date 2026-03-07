@@ -341,9 +341,5 @@ public partial class Story_MainPage : ContentPage
     private void Page_6a_NEXT_Clicked(object sender, EventArgs e)
     {
     }
-
-
-
-
-
+	
 }

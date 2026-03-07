@@ -189,7 +189,7 @@
                     AbsoluteLayout.LayoutBounds="0, 1.025, 1, 0.075"
                     AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
                 </AbsoluteLayout>
-                <AbsoluteLayout Grid.Column="1" Grid.Row="3" HeightRequest="400" Padding="10">
+                <AbsoluteLayout Grid.Column="0" Grid.Row="4" HeightRequest="400" Padding="10">
                     <ImageButton
                     Source="tuna.png"
                     AbsoluteLayout.LayoutBounds="0, 0, 1, 0.8"
@@ -203,6 +203,29 @@
                     AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
                     <Label
                     Text="Want to see random images of cats? GO HERE?!?!?"
+                    FontSize="20"
+                    AbsoluteLayout.LayoutBounds="0, 0.95,1,0.075"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                    <Label
+                    Text="Rating: 10/10"
+                    FontSize="25"
+                    AbsoluteLayout.LayoutBounds="0, 1.025, 1, 0.075"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                </AbsoluteLayout>
+                <AbsoluteLayout Grid.Column="1" Grid.Row="3" HeightRequest="400" Padding="10">
+                    <ImageButton
+                    Source="tuna.png"
+                    AbsoluteLayout.LayoutBounds="0, 0, 1, 0.8"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"
+                    x:Name="ImageButton9"
+                    Clicked="ImageButton9_Clicked1"/>
+                    <Label
+                    Text="Tic-Tac-Toe"
+                    FontSize="30"
+                    AbsoluteLayout.LayoutBounds="0, 0.9, 1, 0.1"
+                    AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
+                    <Label
+                    Text="Start playing Clanker"
                     FontSize="20"
                     AbsoluteLayout.LayoutBounds="0, 0.95,1,0.075"
                     AbsoluteLayout.LayoutFlags="SizeProportional,PositionProportional"/>
