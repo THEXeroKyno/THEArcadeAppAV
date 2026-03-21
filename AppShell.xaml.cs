@@ -34,6 +34,8 @@
             Routing.RegisterRoute("kitty", typeof(Cat));
 
             Routing.RegisterRoute("tictactoe", typeof(Robot));
+
+            Routing.RegisterRoute("checkers", typeof(Checkers));
         }
     }
 }
