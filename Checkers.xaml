@@ -31,6 +31,15 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
     </Grid>
+    <Button
+        Text="PRESS ME TO WIN RIGHT NOW"
+        AbsoluteLayout.LayoutFlags="All"
+        AbsoluteLayout.LayoutBounds="0.5, 1, 0.3, 0.05"
+        BackgroundColor="DarkRed"
+        TextColor="white"
+        x:Name="Forfeit_button"
+        Clicked="Forfeit_button_Clicked"
+    />
 </AbsoluteLayout>
              
 </ContentPage>
