@@ -253,7 +253,7 @@ public partial class Checkers : ContentPage
 
         if(playerID == "user")
         {
-            if (from[1] - to [1] > 1)
+            if (from[1] - to[1] > 1)
             {
                 if (to[0] > from[0])
                 {
@@ -272,7 +272,7 @@ public partial class Checkers : ContentPage
         }
         else if(playerID == "ai")
         {
-            if (to[1] - from [1] > 1)
+            if (to[1] - from[1] > 1)
             {
                 if (to[0] > from[0])
                 {
@@ -359,7 +359,7 @@ public class Checker
                 }
             }
 
-            else
+            else if(player == "ai")
             {
                 int[] move1 = new int[2] { currentLocation[0] - 1, currentLocation[1] + 1};  //AI
                 int[] move2 = new int[2] { currentLocation[0] + 1, currentLocation[1] + 1};

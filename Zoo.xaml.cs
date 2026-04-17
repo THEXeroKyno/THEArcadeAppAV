@@ -37,18 +37,21 @@ public partial class Zoo : ContentPage
 		App.UserRepo.ClearCards(); // clear card table
 
 		//commons
-		App.UserRepo.AddCard("a1", "a1.png", 2, 5, "common"); //anchovy
-		App.UserRepo.AddCard("a2", "a2.png", 5, 5, "common"); //sunfish
-		App.UserRepo.AddCard("a3", "a3.png", 5, 15, "common"); //Pufferfish
-		App.UserRepo.AddCard("a4", "a4.png", 5, 5, "common"); // red snapper
-		App.UserRepo.AddCard("a5", "a5.png", 10, 5, "common"); // salmon
-		App.UserRepo.AddCard("a6", "a6.png", 8, 15, "common"); //albacore
-		App.UserRepo.AddCard("a7", "a7.png", 8, 8, "common"); //squid
-		App.UserRepo.AddCard("a8", "a8.png", 15, 15, "common"); //sturgen
+		App.UserRepo.AddCard("a1", "a1.png", 30, 30, "common"); //anchovy attack is first meaning put g as health
+		App.UserRepo.AddCard("a2", "a2.png", 28, 30, "common"); //sunfish
+		App.UserRepo.AddCard("a3", "a3.png", 80, 200, "common"); //Pufferfish
+		App.UserRepo.AddCard("a4", "a4.png", 40, 50, "common"); // red snapper
+		App.UserRepo.AddCard("a5", "a5.png", 50, 75, "common"); // salmon
+		App.UserRepo.AddCard("a6", "a6.png", 60, 75, "common"); //albacore
+		App.UserRepo.AddCard("a7", "a7.png", 75, 80, "common"); //squid
+		App.UserRepo.AddCard("a8", "a8.png", 78, 200, "common"); //sturgen
 		//rare
 
 		//ledgenary
-		App.UserRepo.AddCard("a8", "a8.png", 15, 15, "legendary");
+		App.UserRepo.AddCard("a9", "a9.png", 80, 1000, "legendary"); //mutan carp
+		App.UserRepo.AddCard("a10", "a10.png", 110, 5000, "legendary"); //legendary
+		App.UserRepo.AddCard("a11c", "a11.png", 95, 1500, "legendary"); //Crimson fish
+		App.UserRepo.AddCard("a12c", "a9.png", 85, 900, "legendary"); //Angler
 		CreateBoard();
 	}
 
