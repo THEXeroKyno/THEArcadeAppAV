@@ -45,8 +45,12 @@ public partial class Zoo : ContentPage
 		App.UserRepo.AddCard("a6", "a6.png", 60, 75, "common"); //albacore
 		App.UserRepo.AddCard("a7", "a7.png", 75, 80, "common"); //squid
 		App.UserRepo.AddCard("a8", "a8.png", 78, 200, "common"); //sturgen
+		App.UserRepo.AddCard("a13", "a13.png", 30, 25, "common"); //triaining
 		//rare
-
+		App.UserRepo.AddCard("a14", "a14.png", 50, 500, "rare"); //bamboo
+		App.UserRepo.AddCard("a15", "a15.png", 70, 1800, "rare"); //fiberglass
+		App.UserRepo.AddCard("a16", "a16.png", 90, 7500, "rare"); //iridium
+		App.UserRepo.AddCard("a17", "a17.png", 110, 15000, "rare"); //advanced
 		//ledgenary
 		App.UserRepo.AddCard("a9", "a9.png", 80, 1000, "legendary"); //mutan carp
 		App.UserRepo.AddCard("a10", "a10.png", 110, 5000, "legendary"); //legendary
