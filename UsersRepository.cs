@@ -27,6 +27,7 @@ public class UserRepository
         conn = new SQLiteConnection(dbPath);
         //generate table (database)
         conn.CreateTable<Users>();
+        conn.CreateTable<Cards>();
     }
 
     public void AddUser(string username, string password)
@@ -68,5 +69,35 @@ public class UserRepository
                 }
             }
         }
+    }
+
+    public void AddCard(string name, string image, int attack, int hitpoint, string rarity)
+    {
+        int result = 0;
+        Init();
+
+        result = conn.Insert(new Cards
+        {
+            Name = name,
+            Image = image,
+            Attack = attack,
+            Hitpoint = hitpoint,
+            Rarity = rarity
+        });
+    }
+
+    public Cards GetCards(string name)
+    {
+        Init();
+
+        return conn.Table<Cards>().Where(u => u.Name == name).FirstOrDefault();
+    }
+
+    public void ClearCards()
+    {
+        int result = 0;
+        Init();
+
+        result = conn.DeleteAll<Cards>();
     }
 }

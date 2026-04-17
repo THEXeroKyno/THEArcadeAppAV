@@ -67,6 +67,11 @@ namespace THEArcadeAppAV
             await Shell.Current.GoToAsync("checkers");
         }
 
+        private async void ImageButton11_Clicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("zoo");
+        }
+
 
 
 

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="THEArcadeAppAV.Zoo"
+             Title="Zoo">
+    <AbsoluteLayout BackgroundColor="RosyBrown">
+        <Grid
+            x:Name="GameBoard"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.5, 0.5"
+            WidthRequest="1000"
+            HeightRequest="860"
+            RowSpacing="15"
+            ColumnSpacing="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        </Grid>
+        <Label
+            AbsoluteLayout.LayoutFlags="All"
+            AbsoluteLayout.LayoutBounds="0.05, 0.2, 0.2, 0.05"
+            BackgroundColor="PaleVioletRed"
+            Text="AI health: 00"
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center"
+            x:Name="AIHealth"/>
+        <Button
+            AbsoluteLayout.LayoutFlags="All"
+            AbsoluteLayout.LayoutBounds="0.05, 0.45, 0.2, 0.1"
+            BackgroundColor="LightGray" 
+            Text="End Turn"
+            TextColor="Black"
+            Padding="0"
+            x:Name="EndTurnButton"
+        />
+        <Label
+            AbsoluteLayout.LayoutFlags="All"
+            AbsoluteLayout.LayoutBounds="0.05, 0.07, 0.2, 0.05"
+            BackgroundColor="LightSkyBlue"
+            Text="UserHealth: 00"
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center"
+            x:Name="UserHealth"/>
+    </AbsoluteLayout>
+
+</ContentPage>

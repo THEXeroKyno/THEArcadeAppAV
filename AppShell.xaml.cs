@@ -36,6 +36,8 @@
             Routing.RegisterRoute("tictactoe", typeof(Robot));
 
             Routing.RegisterRoute("checkers", typeof(Checkers));
+
+            Routing.RegisterRoute("zoo", typeof(Zoo));
         }
     }
 }

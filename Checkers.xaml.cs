@@ -362,7 +362,7 @@ public class Checker
             else
             {
                 int[] move1 = new int[2] { currentLocation[0] - 1, currentLocation[1] + 1};  //AI
-                int[] move2 = new int[2] { currentLocation[0] - 1, currentLocation[1] + 1};
+                int[] move2 = new int[2] { currentLocation[0] + 1, currentLocation[1] + 1};
 
                 CheckerboardSquare sq1 = p.IdentifyCheckerboardSquare(move1);
                 CheckerboardSquare sq2 = p.IdentifyCheckerboardSquare(move2);
@@ -391,7 +391,7 @@ public class Checker
                 {
                     if (Convert.ToString(sq.square.Source).Substring(6) != "white.png" && moveIndex == 0)
                     {
-                        move[0] = (move[0] + 1);
+                        move[0] = (move[0] - 1);
                         move[1] = (move[1] - 1);
                         sq = p.IdentifyCheckerboardSquare(move);
                         move = GetActualUserMoves(move, sq, moveID, p, moveIndex + 1);
@@ -415,14 +415,14 @@ public class Checker
                 {
                     if (Convert.ToString(sq.square.Source).Substring(6) != "white.png" && moveIndex == 0)
                     {
-                        move[0] = (move[0] - 1);
+                        move[0] = (move[0] + 1);
                         move[1] = (move[1] - 1);
                         sq = p.IdentifyCheckerboardSquare(move);
                         move = GetActualUserMoves(move, sq, moveID, p, moveIndex + 1);
                     }
                     else
                     {
-                        return null;
+                        move = null;
                     }
                 }
             }
@@ -437,7 +437,7 @@ public class Checker
     {
         if(moveID == "move1")
         {
-            if(move[0] >= 0 && move[1] >= 7 && sq != null) //checkz if move in baord
+            if(move[0] >= 0 && move[1] <= 7 && sq != null) //checkz if move in baord
             {
                 if(sq.isActive == true) //see if open
                 {
@@ -490,7 +490,7 @@ public class CheckerboardSquare
         public ImageButton square;
         public int[] location = new int[2];
         public bool isActive = false;
-        public bool choosingforMove;
+        public bool choosingforMove = false;
         public int currentState = 0;
         public EventHandler DoToggle;
         public EventHandler DoMove;
@@ -501,7 +501,6 @@ public class CheckerboardSquare
             location[0] = i;
             location[1] = j;
             square = sq;
-            choosingforMove = false;
             TestActive();
         }
 
