@@ -1,5 +1,6 @@
 using System.Data.Common;
 using System.Runtime.CompilerServices;
+using THEArcadeAppAV;
 using THEArcadeAppAV.Models;
 
 namespace THEArcadeAppAV;
@@ -33,14 +34,14 @@ public partial class Zoo : ContentPage
 		"a14",
 		"a15",
 		"a16",
-		"a17"
 	};
 	List<String> legendaryList = new List<String>()
 	{
 		"a9",
 		"a10",
 		"a11c",
-		"a12c"
+		"a12c",
+		"a17"
 	};
 	public Zoo()
 	{
@@ -66,12 +67,13 @@ public partial class Zoo : ContentPage
 		App.UserRepo.AddCard("a14", "a14.png", 50, 500, "rare"); //bamboo
 		App.UserRepo.AddCard("a15", "a15.png", 70, 1800, "rare"); //fiberglass
 		App.UserRepo.AddCard("a16", "a16.png", 90, 7500, "rare"); //iridium
-		App.UserRepo.AddCard("a17", "a17.png", 110, 15000, "rare"); //advanced
+		
 		//ledgenary
 		App.UserRepo.AddCard("a9", "a9.png", 80, 1000, "legendary"); //mutan carp
 		App.UserRepo.AddCard("a10", "a10.png", 110, 5000, "legendary"); //legendary
 		App.UserRepo.AddCard("a11c", "a11.png", 95, 1500, "legendary"); //Crimson fish
 		App.UserRepo.AddCard("a12c", "a9.png", 85, 900, "legendary"); //Angler
+		App.UserRepo.AddCard("a17", "a17.png", 110, 15000, "legendary"); //advanced
 
 		PopulateDeck(AiDeck);
 		PopulateDeck(PlayerDeck);
@@ -142,7 +144,7 @@ public partial class Zoo : ContentPage
 			string name = commonList[randNum];
 
 			//a card will be drawn from the darabase
-			Cards result = App.UserRepo.GetCards(name);
+			Cards result = App.UserRepo.GetCard(name);
 
 			//a new card objet will be Created
 			Card newCard = new Card(result.Name, 0, 0);
@@ -160,7 +162,7 @@ public partial class Zoo : ContentPage
 			string name = rareList[randNum];
 
 			//a card will be drawn from the darabase
-			Cards result = App.UserRepo.GetCards(name);
+			Cards result = App.UserRepo.GetCard(name);
 
 			//a new card objet will be Created
 			Card newCard = new Card(result.Name, 0, 0);
@@ -178,7 +180,7 @@ public partial class Zoo : ContentPage
 			string name = legendaryList[randNum];
 
 			//a card will be drawn from the darabase
-			Cards result = App.UserRepo.GetCards(name);
+			Cards result = App.UserRepo.GetCard(name);
 
 			//a new card objet will be Created
 			Card newCard = new Card(result.Name, 0, 0);
@@ -188,7 +190,7 @@ public partial class Zoo : ContentPage
 
 			ShuffleDeck(Deck);
 		}
-
+	}
 		//shuffle Deck
 		public List<Card> ShuffleDeck(List<Card> deck)
 		{
@@ -221,7 +223,243 @@ public partial class Zoo : ContentPage
 			}
 			return null;
 		}
+
+		public void PlayerMoveCard(CardBoardSquare newSquare)
+		{
+			newSquare.isActive = true;
+			int[] fromLocation = new int[2];
+
+			foreach (CardBoardSquare boardCard in CardBoard)
+			{
+				if (boardCard.chosenForMove)
+				{
+					fromLocation = boardCard.location;
+
+					foreach (Card card in PlayerHand)
+					{
+						if (card.currentLocation[0] == fromLocation[0] && card.currentLocation[1] == fromLocation[1])
+						{
+							card.currentLocation[0] = newSquare.location[0];
+							card.currentLocation[1] = newSquare.location[1];
+
+							newSquare.square.Source = card.Name + ".png";
+
+							PlayerField.Add(card);
+						}
+					}
+
+					boardCard.square.Source = PlayerDeck[0].Name = ".png";
+					boardCard.square.Scale = 1;
+					boardCard.chosenForMove = false;
+				}
+			}
+
+			foreach (CardBoardSquare boardCard in CardBoard)
+			{
+				boardCard.RemoveEvents();
+			}
+
+			//DrawCard(PlayerDeck, fromLocation, PlayerHand);
+		}
+
+		public void DrawCard(List<Card> deck, int[] fromLocation, List<Card> hand)
+		{
+			Card newCard = new Card(deck[0].Name, fromLocation[0], fromLocation[1]);
+
+			hand.Add(newCard);
+
+			deck.RemoveAt(0);
+		}
+
+		public void DeleteCard(Card card)
+		{
+			CardBoardSquare effectedSquare = IdentifyCardBoardSquare(card.currentLocation);
+
+			effectedSquare.square.Source = null;
+			effectedSquare.square.BackgroundColor = Color.FromRgb(255, 255, 255);
+
+			if (card.currentLocation[1] == 1)
+			{
+				AiField.Remove(card);
+				AiHealthNumber--;
+				UpdateHealth(AiHealthNumber, playerHealthNumber);
+			}
+			if (card.currentLocation[1] == 2)
+			{
+				PlayerField.Remove(card);
+				playerHealthNumber--;
+				UpdateHealth(AiHealthNumber, playerHealthNumber);
+			}
+		}
+
+		public CardBoardSquare IdentifyCardBoardSquare (int[] location)
+		{
+			foreach (CardBoardSquare square in CardBoard)
+			{
+				if(square.location[0] == location[0] && square.location[1] == location[1])
+				{
+					return square;
+				}
+			}
+
+			return null;
+		}
+
+		public void AttackThis(CardBoardSquare targetBoard)
+		{
+			int[] targetLocation = new int[2] { targetBoard.location[0], targetBoard.location[1] };
+
+			Card target = IdentifyCard(targetLocation);
+
+			Cards targetData = App.UserRepo.GetCard(target.Name);
+
+			foreach (CardBoardSquare playerCard in CardBoard)
+			{
+				if (playerCard.chosenforattack)
+				{
+					Card attacker = IdentifyCard(playerCard.location);
+
+					Cards attackerData = App.UserRepo.GetCard(attacker.Name);
+
+					if(attackerData.Attack > targetData.Hitpoint)
+					{
+						DeleteCard(target);
+					}
+					if(attackerData.Attack < targetData.Hitpoint)
+					{
+						DeleteCard(attacker);
+					}
+					playerCard.square.Scale = 1;
+				}
+			}
+
+			foreach (CardBoardSquare boardCard in CardBoard)
+			{
+				boardCard.ToggleCard();
+			}
+		}
+
+    private void EndTurnButton_Clicked(object sender, EventArgs e)
+	{
+		AiTurn();
 	}
+
+	public void AiTurn();
+	{
+		int cardsinField = AiField.Count;
+		int playerHighestHitPoint = 0;
+		Cards playerCard = null;
+		Card target = null;
+		Card Aicard = null;
+		bool endTurn = false;
+		List<Card> playerAiCard = new List<Card>();
+
+		foreach (Card card in PlayerField)
+		{
+			playerCard = App.UserRepo.GetCard(card.Name);
+			
+			if(playerCard.Hitpoint > playerHighestHitpointCard)
+			{
+				playerHighestHitPointCard = playerCard.Hitpoint;
+				target = card;
+			}
+		}
+
+		foreach (Card card in Aihand)
+		{
+			Cards AiCardData = App.UserRepo.GetCard(Card.Name);
+			
+			if(AiCardData.Attack > playerHighestHitpointCard)
+			{
+				playableAiCard.Add(card);
+			}
+			else
+			{
+				if(AiCardData.Hitpoint > playerHighestHitpointCard)
+				{
+					playableAiCard.Add(card);
+				}
+			}
+		}
+		foreach (Card card in playableAiCard)
+		{
+			AiCard = card;
+			int currentCardAttack = App.UserRepo.GetCard(AiCard.Name).Attack;
+			int CardInListAttack = App.UserRepo.GetCard(card.Name).Attack;
+
+			if(currentCardAttack >= cardInListAttack)
+			{
+				AiCard = card;
+			}
+		}
+
+		if(cardsinField < 2)
+		{
+			
+		}
+		else
+		{
+			
+			foreach (Card card in AiField)
+			{
+				Cards cardData = App.UserRepo.GetCard(card.Name);
+
+				if(cardData.Attack > playerCard.HitPoint)
+				{
+					
+				}
+			}
+		}
+		foreach (CardBoardSquare cbs in CardBoard)
+		{
+			cbs.ToggleCard();
+		}
+	}
+
+	public void AiPlayCard(Card card)
+	{
+		int[] currentLocation = new int[2] { card.currentLocation[0], card.currentLocation[1] };
+		int[] downMove = new int[2] { card.currentLocation[0], card.currentLocation[1] + 1};
+		int[] downRightMove new int[2] { card.currentLocation[0] + 1, card.currentLocation[1] + 1};
+		int[] downLeftMove = new int[2] { card.currentLocation[0] - 1, card.currentLocation[1] - 1};
+		CardBoardSquare fromSquare = IdentifyCardBoardSquare(currentLocation);
+		CardBoardSquare toSquare = IdentifyCardBoardSquare(downMove);
+
+		if(Convert.ToString(toSquare.square.Source).Length > 2)
+		{
+			toSquare = IdentifyCardBoardSquare(downLeftMove);
+
+			if(Convert.ToString(toSquare.square.Source).Length > 2)
+			{
+				toSquare = IdentifyCardBoardSquare(downRightMove);
+				
+				card.currentLocation = toSquare.location;
+				fromSquare.square.Source = AiDeck[0].Name + ".png";
+				toSquare.square.Source = card.Name + ".png";
+				Card newCard = new Card(card.Name, toSquare.location[0])
+				AiField.Add(newCard);
+			}
+			else
+			{
+				card.currentLocation = toSquare.location;
+				fromSquare.square.Source = AiDeck[0].Name + ".png";
+				toSquare.square.Source = card.Name + ".png";
+				Card newCard = new Card(Card.Name, toSquare.location[0], toSquare.location[1]);
+				AiField.Add(newCard);
+			}
+		}
+		else
+		{
+			card.currentLocation = toSquare.location;
+			fromSquare.square.Source = AiDeck[0].Name + ".png";
+			toSquare.square.Source = card.Name + ".png";
+			Card newcard = new Card(card.Name, toSquare.location[0], toSquare.location[1]);
+			AiField.Add(newCard);
+		}
+	}
+
+
+}
 
 	public class Card
 	{
@@ -302,7 +540,7 @@ public partial class Zoo : ContentPage
 				}
 			}
 		}
-	}
+	
 	public bool IsUserCard()
 	{
 		if (location[1] == 2 || location[1] == 3)
@@ -328,14 +566,16 @@ public partial class Zoo : ContentPage
 	{
 		DoMove = (sender, args) =>
 		{
-			if(Convert.ToString(square.BackgroundColor) == Convert.ToString(Color.FromRgb(255, 255, 255)) || Convert.ToString(square.Source).Length == 0
+			if(Convert.ToString(square.BackgroundColor) == Convert.ToString(Color.FromRgb(255, 255, 255)) || Convert.ToString(square.Source).Length == 0)
 			{
 				currentState = 0;
 				chosenForMove = false;
 				p.cardIsSelected = false;
 				square.BackgroundColor = Color.FromRgb(0, 0, 0); //black
+
+				p.PlayerMoveCard(this);
 			}
-		}
+		};
 		square.Clicked += DoMove;
 	}
 	// color = Color.FromRgb(255, 255, 255); //white
@@ -350,8 +590,9 @@ public partial class Zoo : ContentPage
 				chosenforattack = false;
 				p.cardIsSelected = false;
 				//player attack
+				p.AttackThis(this);
 			}
-		}
+		};
 		square.Clicked += CanAttack;
 	}
 

@@ -86,7 +86,7 @@ public class UserRepository
         });
     }
 
-    public Cards GetCards(string name)
+    public Cards GetCard(string name)
     {
         Init();
 
